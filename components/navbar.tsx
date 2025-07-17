@@ -15,6 +15,7 @@ const NAV_MENU = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about-us" },
   { name: "Blog", href: "/blog" },
+  { name: "Public Feedback", href: "/aduan" },
   { name: "Contact Us", href: "/contact-us" },
 ];
 
