@@ -145,7 +145,11 @@ export function Navbar() {
             ))}
           </ul>
           <div className="mt-6 flex items-center gap-2">
-            <Button variant="filled" color={pathname !== '/' ? "gray" : "black"} className="bg-black text-white hover:bg-gray-800">
+            <Button variant="filled" color={pathname !== '/' ? "gray" : "black"} className="bg-black text-white hover:bg-gray-800"
+              placeholder=""      
+              onPointerEnterCapture={() => {}}
+              onPointerLeaveCapture={() => {}}
+            >
               Log in
             </Button>
           </div>
