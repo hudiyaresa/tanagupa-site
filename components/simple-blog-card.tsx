@@ -18,14 +18,26 @@ interface SimpleContentCard {
       <div className=" pb-10">
         <div className="flex items-center mb-3 gap-2">
           <Icon className="h-5 w-5 text-gray-900" />
-          <Typography className="w-full" variant="h6">
+          <Typography className="w-full" variant="h6"
+            placeholder=""      
+            onPointerEnterCapture={() => {}}
+            onPointerLeaveCapture={() => {}}          
+          >
             {title}
           </Typography>
         </div>
-        <Typography className="!text-base w-7/12 md:w-full mb-3 font-normal !text-gray-700">
+        <Typography className="!text-base w-7/12 md:w-full mb-3 font-normal !text-gray-700"
+          placeholder=""      
+          onPointerEnterCapture={() => {}}
+          onPointerLeaveCapture={() => {}}        
+        >
           {subtitle}
         </Typography>
-        <Typography className="!text-xs font-normal !text-gray-500">
+        <Typography className="!text-xs font-normal !text-gray-500"
+          placeholder=""      
+          onPointerEnterCapture={() => {}}
+          onPointerLeaveCapture={() => {}}        
+        >
           {name}
         </Typography>
       </div>
