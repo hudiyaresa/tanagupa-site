@@ -10,6 +10,7 @@ import {
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const NAV_MENU = [
   { name: "Home", href: "/" },
@@ -29,8 +30,8 @@ function NavItem({
 }) {
   return (
     <li>
-      <Link href={href} legacyBehavior>
-        <a className="flex items-center gap-2 font-medium">{children}</a>
+      <Link href={href} className="flex items-center gap-2 font-medium">
+        {children}
       </Link>
     </li>
   );
@@ -39,6 +40,7 @@ function NavItem({
 export function Navbar() {
   const [open, setOpen] = React.useState(false);
   const [isScrolling, setIsScrolling] = React.useState(false);
+  const pathname = typeof window !== 'undefined' ? window.location.pathname : '/';
   function handleOpen() {
     setOpen((cur) => !cur);
   }
@@ -69,39 +71,37 @@ export function Navbar() {
       fullWidth
       shadow={false}
       blurred={false}
-      color={isScrolling ? "white" : "transparent"}
-      className="fixed top-0 z-50 border-0"
+      color={pathname !== '/' ? "white" : isScrolling ? "white" : "transparent"}
+      className={`fixed top-0 z-50 border-0 ${pathname !== '/' ? 'bg-white' : ''}`}
     >
       <div className="container mx-auto flex items-center justify-between">
         <Typography
           as="a"
-          href="https://www.material-tailwind.com"
-          target="_blank"
-          className="text-lg font-bold"
-          color={isScrolling ? "blue-gray" : "white"}
+          href="/"
+          className={`text-lg font-bold ${pathname !== '/' ? 'text-black' : isScrolling ? 'text-blue-gray-900' : 'text-white'}`}
+          color={pathname !== '/' ? "blue-gray" : isScrolling ? "blue-gray" : "white"}
         >
           Tanagupa Sites
         </Typography>
         <ul
-          className={`ml-10 hidden items-center gap-6 lg:flex ${
-            isScrolling ? "text-gray-900" : "text-white"
-          }`}
+          className={`ml-10 hidden items-center gap-6 lg:flex ${pathname !== '/' ? 'text-black' : isScrolling ? 'text-gray-900' : 'text-white'}`}
         >
           {NAV_MENU.map((item) => (
             <NavItem key={item.name} href={item.href}>
-              {item.name}
+              <span className={
+                pathname === item.href
+                  ? "bg-gray-900 text-white rounded-md px-4 py-2 font-bold shadow-md"
+                  : ""
+              }>
+                {item.name}
+              </span>
             </NavItem>
           ))}
         </ul>
         <div className="hidden items-center gap-2 lg:flex">
-          <Button variant="text" color={isScrolling ? "gray" : "white"}>
+          <Button variant="filled" color={pathname !== '/' ? "gray" : isScrolling ? "gray" : "black"} className="bg-black text-white hover:bg-gray-800">
             Log in
           </Button>
-          <a href="https://www.material-tailwind.com/blocks" target="_blank">
-            <Button color={isScrolling ? "gray" : "white"}>
-              blocks
-            </Button>
-          </a>
         </div>
         <IconButton
           variant="text"
@@ -121,19 +121,20 @@ export function Navbar() {
           <ul className="flex flex-col gap-4">
             {NAV_MENU.map((item) => (
               <NavItem key={item.name} href={item.href}>
-                {item.name}
+                <span className={
+                  pathname === item.href
+                    ? "bg-gray-900 text-white rounded-md px-4 py-2 font-bold shadow-md"
+                    : ""
+                }>
+                  {item.name}
+                </span>
               </NavItem>
             ))}
           </ul>
           <div className="mt-6 flex items-center gap-2">
-            <Button variant="text">
+            <Button variant="filled" color={pathname !== '/' ? "gray" : "black"} className="bg-black text-white hover:bg-gray-800">
               Log in
             </Button>
-            <a href="https://www.material-tailwind.com/blocks" target="_blank">
-              <Button color="gray">
-                blocks
-              </Button>
-            </a>
           </div>
         </div>
       </Collapse>

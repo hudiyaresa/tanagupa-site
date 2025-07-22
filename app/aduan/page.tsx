@@ -57,47 +57,49 @@ export default function AduanPage() {
 
   return (
     <ClientLayout>
-      <main className="max-w-2xl mx-auto py-12 px-4">
-        <h1 className="text-3xl font-bold mb-6 text-center">Daftar Aduan</h1>
-        <ul className="mb-8 space-y-4">
-          {aduanList.map((aduan) => (
-            <li key={aduan.id} className="border rounded-lg p-4 bg-white shadow flex flex-col md:flex-row md:items-center md:justify-between">
-              <div>
-                <strong className="text-blue-700">{aduan.nama}</strong> - {aduan.isi} <span className="italic text-sm">({aduan.status})</span>
-              </div>
-              <div className="flex gap-2 mt-2 md:mt-0">
-                <button className="px-3 py-1 rounded bg-yellow-400 text-white" onClick={() => handleUpdateStatus(aduan.id, "diproses")}>Proses</button>
-                <button className="px-3 py-1 rounded bg-green-600 text-white" onClick={() => handleUpdateStatus(aduan.id, "selesai")}>Selesai</button>
-                <button className="px-3 py-1 rounded bg-red-500 text-white" onClick={() => handleDelete(aduan.id)}>Hapus</button>
-              </div>
-            </li>
-          ))}
-        </ul>
-        <hr className="my-8" />
-        <h2 className="text-2xl font-semibold mb-4">Tambah Aduan</h2>
-        <div className="space-y-4">
-          <input
-            className="w-full border rounded px-3 py-2"
-            placeholder="Nama"
-            value={form.nama}
-            onChange={(e) => setForm({ ...form, nama: e.target.value })}
-          />
-          <input
-            className="w-full border rounded px-3 py-2"
-            placeholder="Email"
-            value={form.email}
-            onChange={(e) => setForm({ ...form, email: e.target.value })}
-          />
-          <textarea
-            className="w-full border rounded px-3 py-2"
-            placeholder="Isi aduan"
-            value={form.isi}
-            onChange={(e) => setForm({ ...form, isi: e.target.value })}
-          ></textarea>
-          <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition w-full" onClick={handleSubmit}>Kirim</button>
-        </div>
-      </main>
-      <Footer />
+      <div className="max-w-2xl mx-auto pt-32 pb-24 px-4">
+        <main className="py-12">
+          <h1 className="text-3xl font-bold mb-6 text-center">Daftar Aduan</h1>
+          <ul className="mb-8 space-y-4">
+            {aduanList.map((aduan) => (
+              <li key={aduan.id} className="border rounded-lg p-4 bg-white shadow flex flex-col md:flex-row md:items-center md:justify-between">
+                <div>
+                  <strong className="text-blue-700">{aduan.nama}</strong> - {aduan.isi} <span className="italic text-sm">({aduan.status})</span>
+                </div>
+                <div className="flex gap-2 mt-2 md:mt-0">
+                  <button className="px-3 py-1 rounded bg-yellow-400 text-white" onClick={() => handleUpdateStatus(aduan.id, "diproses")}>Proses</button>
+                  <button className="px-3 py-1 rounded bg-green-600 text-white" onClick={() => handleUpdateStatus(aduan.id, "selesai")}>Selesai</button>
+                  <button className="px-3 py-1 rounded bg-red-500 text-white" onClick={() => handleDelete(aduan.id)}>Hapus</button>
+                </div>
+              </li>
+            ))}
+          </ul>
+          <hr className="my-8" />
+          <h2 className="text-2xl font-semibold mb-4">Tambah Aduan</h2>
+          <div className="space-y-4">
+            <input
+              className="w-full border rounded px-3 py-2"
+              placeholder="Nama"
+              value={form.nama}
+              onChange={(e) => setForm({ ...form, nama: e.target.value })}
+            />
+            <input
+              className="w-full border rounded px-3 py-2"
+              placeholder="Email"
+              value={form.email}
+              onChange={(e) => setForm({ ...form, email: e.target.value })}
+            />
+            <textarea
+              className="w-full border rounded px-3 py-2"
+              placeholder="Isi aduan"
+              value={form.isi}
+              onChange={(e) => setForm({ ...form, isi: e.target.value })}
+            ></textarea>
+            <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition w-full" onClick={handleSubmit}>Kirim</button>
+          </div>
+        </main>
+        <Footer />
+      </div>
     </ClientLayout>
   );
 }

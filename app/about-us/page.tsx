@@ -7,7 +7,7 @@ import { Footer } from "@/components/footer";
 export default function AboutUsPage() {
   return (
     <ClientLayout>
-      <div className="max-w-2xl mx-auto py-12 px-4">
+      <div className="max-w-2xl mx-auto pt-32 pb-24 px-4">
         <h1 className="text-3xl font-bold mb-6 text-center">Visi dan Misi</h1>
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-2">Visi Kemenhut</h2>

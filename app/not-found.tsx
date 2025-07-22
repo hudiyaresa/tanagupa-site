@@ -20,7 +20,7 @@ export default function NotFound() {
           Don&apos;t worry, our team is already on it. Please try refreshing
           the page or come back later.
         </Typography>
-        <Link href="/" passHref legacyBehavior>
+        <Link href="/">
           <Button color="gray" className="w-full px-4 md:w-[8rem]">
             back home
           </Button>

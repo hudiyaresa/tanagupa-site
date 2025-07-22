@@ -13,7 +13,7 @@ const BLOGS = [
 export default function BlogListPage() {
 	return (
 		<ClientLayout>
-			<div className="max-w-2xl mx-auto py-12 px-4">
+			<div className="max-w-2xl mx-auto pt-32 pb-24 px-4">
 				<h1 className="text-3xl font-bold mb-8 text-center">Blog</h1>
 				<div className="space-y-6">
 					{BLOGS.map((blog) => (
