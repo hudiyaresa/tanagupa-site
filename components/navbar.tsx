@@ -118,6 +118,9 @@ export function Navbar() {
           onClick={handleOpen}
           color={isScrolling ? "gray" : "white"}
           className="ml-auto inline-block lg:hidden"
+          placeholder=""      
+          onPointerEnterCapture={() => {}}
+          onPointerLeaveCapture={() => {}}        
         >
           {open ? (
             <XMarkIcon strokeWidth={2} className="h-6 w-6" />
