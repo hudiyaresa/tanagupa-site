@@ -8,21 +8,21 @@ export function Content() {
   return (
     <section className="py-12 px-8">
       <div className="mx-auto max-w-screen-md">
-        <Typography color="blue" variant="h6">
+        <Typography color="blue" variant="h6" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
           #tanagupa #nationalpark #kemenhut
         </Typography>
-        <Typography className="my-12 font-normal !text-gray-500">
+        <Typography className="my-12 font-normal !text-gray-500" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
         Taman Nasional Gunung Palung is more than a protected area—it’s a living mosaic of West Borneo’s green soul.  
         From mangrove and peat swamp at its edges to lowland and montane forests within, every layer 
         shelters hidden lives and ancient rhythms. In these forests, the air still carries whispers of 
         biodiversity older than memory.
         </Typography>
 
-        <Typography variant="h2" color="blue-gray" className="mt-8 mb-6">
+        <Typography variant="h2" color="blue-gray" className="mt-8 mb-6" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
           A Sanctuary for Earth’s Silent Architects
         </Typography>
 
-        <Typography className="my-10 font-normal !text-gray-500">
+        <Typography className="my-10 font-normal !text-gray-500" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
           Across its sprawling 108,000 hectares, Gunung Palung is home to deep canopies and secretive 
           denizens that balance life in layers. Towering dipterocarps and endemic trees like <i>Vatica 
           palungensis</i> rise above, while below, rare fungi and orchids weave silent connections. The park 
@@ -39,7 +39,7 @@ export function Content() {
           alt="post"
           className="mb-4 h-[28rem] w-full rounded-xl object-cover"
         />
-        <Typography variant="small" className="font-normal !text-gray-500">
+        <Typography variant="small" className="font-normal !text-gray-500" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
           Photo by Tim Laman
           <a
             href="#"
@@ -51,18 +51,18 @@ export function Content() {
           </a>
         </Typography>
 
-        <Typography className="my-12 font-normal !text-gray-500">
+        <Typography className="my-12 font-normal !text-gray-500" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
           But this sanctuary is fragile. Illegal logging, fires, and agro-conversion in buffer zones threaten 
           canopy connectivity—critical for arboreal species like orangutans. In fragmented forests, densities 
           fell from 1 per 2 km² to as low as 1 per 20 km².  Still, communities and NGOs have rallied. Stories include reforestation efforts tied to health clinics, 
           chainsaw buy-back programs, and stepped-up patrols—all reducing deforestation and reigniting hope.
         </Typography>
 
-        <Typography variant="h2" color="blue-gray" className="mt-8 mb-6">
+        <Typography variant="h2" color="blue-gray" className="mt-8 mb-6" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
           Why Gunung Palung Matters
         </Typography>
 
-        <Typography className="my-10 font-normal !text-gray-500">
+        <Typography className="my-10 font-normal !text-gray-500" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
           • It conserves one of the world’s richest biological tapestries—from peat swamps to mist-laden hills.<br></br>  
           • It sustains one of Borneo’s densest populations of critically endangered orangutans.<br></br> 
           • It provides over two decades of invaluable ecological research, shaping global understanding of how food availability influences reproduction in great apes.<br></br>   
@@ -107,10 +107,13 @@ export function Content() {
                   variant="h5"
                   className="mb-4 md:mb-0"
                   color="blue-gray"
+                  placeholder=""
+                  onPointerEnterCapture={() => {}}
+                  onPointerLeaveCapture={() => {}}
                 >
                   Emma Roberts
                 </Typography>
-                <Typography className="w-full md:w-10/12 font-normal !text-gray-500">
+                <Typography className="w-full md:w-10/12 font-normal !text-gray-500" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
                   Dr. Sarah Mitchell is a passionate and accomplished biologist
                   with a deep-rooted fascination for the intricate workings of
                   the natural world.
@@ -121,6 +124,9 @@ export function Content() {
               color="gray"
               className="w-1/2 md:w-fit flex-shrink-0"
               size="md"
+              placeholder=""
+              onPointerEnterCapture={() => {}}
+              onPointerLeaveCapture={() => {}}
             >
               follow
             </Button>
