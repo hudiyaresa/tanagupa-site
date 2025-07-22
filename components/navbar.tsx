@@ -83,6 +83,9 @@ export function Navbar() {
           href="/"
           className={`text-lg font-bold ${pathname !== '/' ? 'text-black' : isScrolling ? 'text-blue-gray-900' : 'text-white'}`}
           color={pathname !== '/' ? "blue-gray" : isScrolling ? "blue-gray" : "white"}
+          placeholder=""      
+          onPointerEnterCapture={() => {}}
+          onPointerLeaveCapture={() => {}}        
         >
           Tanagupa Sites
         </Typography>
