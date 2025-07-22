@@ -9,10 +9,3 @@ export type Aduan = {
   tanggal: string;
   status: string;
 };
-
-// The following types are not used in this web app and can be ignored or removed for cleanliness:
-// export type User = { ... };
-// export type Customer = { ... };
-// export type Invoice = { ... };
-// export type Revenue = { ... };
-// export type LatestInvoice = { ... };

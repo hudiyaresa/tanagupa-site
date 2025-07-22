@@ -15,6 +15,7 @@ const NAV_MENU = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about-us" },
   { name: "Blog", href: "/blog" },
+  { name: "E-Simaksi", href: "/e-simaksi" },
   { name: "Public Feedback", href: "/aduan" },
   { name: "Contact Us", href: "/contact-us" },
 ];
@@ -97,7 +98,9 @@ export function Navbar() {
             Log in
           </Button>
           <a href="https://www.material-tailwind.com/blocks" target="_blank">
-            <Button color={isScrolling ? "gray" : "white"}>blocks</Button>
+            <Button color={isScrolling ? "gray" : "white"}>
+              blocks
+            </Button>
           </a>
         </div>
         <IconButton
@@ -123,9 +126,13 @@ export function Navbar() {
             ))}
           </ul>
           <div className="mt-6 flex items-center gap-2">
-            <Button variant="text">Log in</Button>
+            <Button variant="text">
+              Log in
+            </Button>
             <a href="https://www.material-tailwind.com/blocks" target="_blank">
-              <Button color="gray">blocks</Button>
+              <Button color="gray">
+                blocks
+              </Button>
             </a>
           </div>
         </div>

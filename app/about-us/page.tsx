@@ -1,11 +1,12 @@
+"use client";
+
 import React from "react";
-import { Navbar } from "@/components/navbar";
+import ClientLayout from "@/components/ClientLayout";
 import { Footer } from "@/components/footer";
 
 export default function AboutUsPage() {
   return (
-    <>
-      <Navbar />
+    <ClientLayout>
       <div className="max-w-2xl mx-auto py-12 px-4">
         <h1 className="text-3xl font-bold mb-6 text-center">Visi dan Misi</h1>
         <section className="mb-8">
@@ -34,6 +35,6 @@ export default function AboutUsPage() {
         </section>
       </div>
       <Footer />
-    </>
+    </ClientLayout>
   );
 }

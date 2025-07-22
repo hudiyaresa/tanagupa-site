@@ -1,5 +1,5 @@
 "use client";
-import { Navbar } from "@/components/navbar";
+import ClientLayout from "@/components/ClientLayout";
 import { Footer } from "@/components/footer";
 import React from "react";
 import { useParams } from "next/navigation";
@@ -7,8 +7,7 @@ import { useParams } from "next/navigation";
 export default function BlogPage() {
   const params = useParams();
   return (
-    <>
-      <Navbar />
+    <ClientLayout>
       <div className="max-w-2xl mx-auto py-12 px-4">
         <h1 className="text-3xl font-bold mb-6">Blog Post {params.id}</h1>
         <p className="text-lg mb-4">
@@ -24,6 +23,6 @@ export default function BlogPage() {
         </div>
       </div>
       <Footer />
-    </>
+    </ClientLayout>
   );
 }

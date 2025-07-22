@@ -1,11 +1,11 @@
+"use client";
 import React from "react";
-import { Navbar } from "@/components/navbar";
+import ClientLayout from "@/components/ClientLayout";
 import { Footer } from "@/components/footer";
 
 export default function ContactUsPage() {
   return (
-    <>
-      <Navbar />
+    <ClientLayout>
       <div className="max-w-xl mx-auto py-12 px-4">
         <h1 className="text-3xl font-bold mb-6 text-center">Contact Us</h1>
         <div className="mb-8 space-y-2">
@@ -30,6 +30,6 @@ export default function ContactUsPage() {
         </form>
       </div>
       <Footer />
-    </>
+    </ClientLayout>
   );
 }

@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Navbar } from "@/components/navbar";
+import ClientLayout from "@/components/ClientLayout";
 import { Footer } from "@/components/footer";
 
 export type Aduan = {
@@ -56,8 +56,7 @@ export default function AduanPage() {
   };
 
   return (
-    <>
-      <Navbar />
+    <ClientLayout>
       <main className="max-w-2xl mx-auto py-12 px-4">
         <h1 className="text-3xl font-bold mb-6 text-center">Daftar Aduan</h1>
         <ul className="mb-8 space-y-4">
@@ -99,6 +98,6 @@ export default function AduanPage() {
         </div>
       </main>
       <Footer />
-    </>
+    </ClientLayout>
   );
 }

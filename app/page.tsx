@@ -1,5 +1,7 @@
+"use client";
+
 // components
-import { Navbar } from "@/components/navbar";
+import ClientLayout from "@/components/ClientLayout";
 import { Footer } from "@/components/footer";
 
 // sections
@@ -9,12 +11,11 @@ import Comments from "./comments";
 
 export default function Campaign() {
   return (
-    <>
-      <Navbar />
+    <ClientLayout>
       <Hero />
       <Content />
       <Comments />
       <Footer />
-    </>
+    </ClientLayout>
   );
 }
