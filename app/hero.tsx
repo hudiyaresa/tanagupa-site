@@ -10,14 +10,14 @@ function Hero() {
     <div className="grid min-h-screen px-8">
       <div className="container relative z-10 my-auto mx-auto grid place-items-center text-center">
         <Typography variant="h1" color="white">
-          Exploring the Wonders of Biologyat Night...
+          Taman Nasional Gunung Palung
         </Typography>
         <Typography
           variant="lead"
           color="white"
           className="mt-4 mb-12 w-full md:max-w-full lg:max-w-3xl"
         >
-          Introduction: Join us in a a journey into the world of life!
+          Small pieces on Earth, where the shadows protect the world’s quiet miracles
         </Typography>
         <Typography
           variant="paragraph"

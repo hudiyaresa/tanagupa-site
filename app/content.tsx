@@ -9,32 +9,28 @@ export function Content() {
     <section className="py-12 px-8">
       <div className="mx-auto max-w-screen-md">
         <Typography color="blue" variant="h6">
-          #science #biology #ecology
+          #tanagupa #nationalpark #kemenhut
         </Typography>
         <Typography className="my-12 font-normal !text-gray-500">
-          Biology, often referred to as the &quot;science of life,&quot; is a
-          captivating and multifaceted field that delves into the intricate web
-          of living organisms and the systems that sustain them. From the
-          tiniest microorganisms to the towering giants of the animal kingdom,
-          biology offers a profound understanding of life&apos;s mechanisms,
-          evolution, and interconnectedness.
+        Taman Nasional Gunung Palung is more than a protected area—it’s a living mosaic of West Borneo’s green soul.  
+        From mangrove and peat swamp at its edges to lowland and montane forests within, every layer 
+        shelters hidden lives and ancient rhythms. In these forests, the air still carries whispers of 
+        biodiversity older than memory.
         </Typography>
 
         <Typography variant="h2" color="blue-gray" className="mt-8 mb-6">
-          Exploring the Wonders of Biology
+          A Sanctuary for Earth’s Silent Architects
         </Typography>
 
         <Typography className="my-10 font-normal !text-gray-500">
-          The Branches of Biology Biology encompasses a diverse array of
-          branches, each focusing on specific aspects of living organisms. Here
-          are a few key ones: a. Genetics: Genetics unravels the secrets of
-          heredity, studying how traits are passed from one generation to the
-          next and how variations occur. Recent advancements in genomics have
-          revolutionized medicine, enabling personalized treatments based on an
-          individual&apos;s genetic makeup. b. Ecology: Ecology delves into the
-          relationships between organisms and their environments. It plays a
-          pivotal role in understanding and addressing environmental challenges,
-          such as climate change and biodiversity loss.
+          Across its sprawling 108,000 hectares, Gunung Palung is home to deep canopies and secretive 
+          denizens that balance life in layers. Towering dipterocarps and endemic trees like <i>Vatica 
+          palungensis</i> rise above, while below, rare fungi and orchids weave silent connections. The park 
+          shelters about 2,500 Bornean orangutans—nearly 10 % of their global population—alongside gibbons, 
+          proboscis monkeys, sun bears, clouded leopards, pangolins, and over 230 bird species including 
+          hornbills and pittas.  
+          The woodlands are not merely backdrop—they're the stage upon which life performs a delicate 
+          ecological ballet every day.
         </Typography>
         <Image
           width={768}
@@ -44,7 +40,7 @@ export function Content() {
           className="mb-4 h-[28rem] w-full rounded-xl object-cover"
         />
         <Typography variant="small" className="font-normal !text-gray-500">
-          Photo by Jackson Sophat on{" "}
+          Photo by Tim Laman
           <a
             href="#"
             target="_blank"
@@ -56,43 +52,22 @@ export function Content() {
         </Typography>
 
         <Typography className="my-12 font-normal !text-gray-500">
-          Thank you Anna for the invite thank you to the whole Vogue team And I
-          love you like Kanye loves Kanye.
-          <br />
-          <br />
-          The Arctic Ocean freezes every winter and much of the sea-ice then
-          thaws every summer, and that process will continue whatever happens
-          with climate change. Even if the Arctic continues to be one of the
-          fastest-warming regions of the world, it will always be plunged into
-          bitterly cold polar dark every winter. And year-by-year, for all kinds
-          of natural reasons, there&apos;s huge variety of the state of the ice.
+          But this sanctuary is fragile. Illegal logging, fires, and agro-conversion in buffer zones threaten 
+          canopy connectivity—critical for arboreal species like orangutans. In fragmented forests, densities 
+          fell from 1 per 2 km² to as low as 1 per 20 km².  Still, communities and NGOs have rallied. Stories include reforestation efforts tied to health clinics, 
+          chainsaw buy-back programs, and stepped-up patrols—all reducing deforestation and reigniting hope.
         </Typography>
 
         <Typography variant="h2" color="blue-gray" className="mt-8 mb-6">
-          So what does the new record for the lowest level of winter ice
-          actually mean
+          Why Gunung Palung Matters
         </Typography>
 
         <Typography className="my-10 font-normal !text-gray-500">
-          For a start, it does not automatically follow that a record amount of
-          ice will melt this summer. More important for determining the size of
-          the annual thaw is the state of the weather as the midnight sun
-          approaches and temperatures rise. But over the more than 30 years of
-          satellite records, scientists have observed a clear pattern of
-          decline, decade-by-decade.
-          <br />
-          <br />
-          The Arctic Ocean freezes every winter and much of the sea-ice then
-          thaws every summer, and that process will continue whatever happens
-          with climate change. Even if the Arctic continues to be one of the
-          fastest-warming regions of the world, it will always be plunged into
-          bitterly cold polar dark every winter. And year-by-year, for all kinds
-          of natural reasons, there&apos;s huge variety of the state of the ice.
-          <br />
-          <br />
-          Society has put up so many boundaries, so many limitations on
-          what&apos;s right and wrong that it&apos;s almost impossible to get a
-          pure thought out.
+          • It conserves one of the world’s richest biological tapestries—from peat swamps to mist-laden hills.<br></br>  
+          • It sustains one of Borneo’s densest populations of critically endangered orangutans.<br></br> 
+          • It provides over two decades of invaluable ecological research, shaping global understanding of how food availability influences reproduction in great apes.<br></br>   
+          • It exemplifies how local stewardship combined with scientific insight can reverse environmental decline. <br></br>  
+          • Its future echoes far beyond its borders—as a symbol of coexistence between humanity and wilderness.<br></br> 
         </Typography>
         <div className="container mx-auto px-4 py-20">
           <div className="w-full mb-10 md:flex items-center justify-between">
@@ -102,9 +77,6 @@ export function Content() {
               </Button>
               <Button size="sm" color="gray" variant="outlined">
                 design
-              </Button>
-              <Button size="sm" color="gray" variant="outlined">
-                catle
               </Button>
             </div>
             <div className="flex items-center gap-3">
