@@ -72,10 +72,10 @@ export function Content() {
         <div className="container mx-auto px-4 py-20">
           <div className="w-full mb-10 md:flex items-center justify-between">
             <div className="flex mb-5 md:mb-0 items-center gap-3">
-              <Button size="sm" color="gray" variant="outlined">
+              <Button size="sm" color="gray" variant="outlined" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
                 stories
               </Button>
-              <Button size="sm" color="gray" variant="outlined">
+              <Button size="sm" color="gray" variant="outlined" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
                 design
               </Button>
             </div>
