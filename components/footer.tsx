@@ -30,6 +30,9 @@ export function Footer() {
 						target="_blank"
 						variant="h4"
 						className="mb-6"
+						placeholder=""
+						onPointerEnterCapture={() => {}}
+						onPointerLeaveCapture={() => {}}
 					>
 						Material Tailwind
 					</Typography>
