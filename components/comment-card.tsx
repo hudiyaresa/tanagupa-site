@@ -22,8 +22,16 @@ export function CommentCard({ img, name, desc, hours }: CommentCardProps) {
       shadow={false}
       color="transparent"
       className="grid items-center gap-6 "
+      placeholder=""
+      onPointerEnterCapture={() => {}}
+      onPointerLeaveCapture={() => {}}
     >
-      <CardBody className="p-0 gap-5 flex ">
+      <CardBody
+        className="p-0 gap-5 flex "
+        placeholder=""
+        onPointerEnterCapture={() => {}}
+        onPointerLeaveCapture={() => {}}
+      >
         <div className=" !m-0 h-full  w-full  max-h-[40px] max-w-[40px] ">
           <Image
             width={768}
@@ -38,14 +46,28 @@ export function CommentCard({ img, name, desc, hours }: CommentCardProps) {
             <Typography
               variant="small"
               className=" font-bold flex items-center gap-2 !text-gray-900"
+              placeholder=""
+              onPointerEnterCapture={() => {}}
+              onPointerLeaveCapture={() => {}}
             >
               {name}
             </Typography>
-            <Typography variant="small" className="font-medium !text-gray-500">
+            <Typography
+              variant="small"
+              className="font-medium !text-gray-500"
+              placeholder=""
+              onPointerEnterCapture={() => {}}
+              onPointerLeaveCapture={() => {}}
+            >
               {hours}
             </Typography>
           </div>
-          <Typography className="w-full font-normal mb-4 !text-gray-500">
+          <Typography
+            className="w-full font-normal mb-4 !text-gray-500"
+            placeholder=""
+            onPointerEnterCapture={() => {}}
+            onPointerLeaveCapture={() => {}}
+          >
             {desc}
           </Typography>
           <div className="!w-full flex justify-end">
@@ -55,6 +77,9 @@ export function CommentCard({ img, name, desc, hours }: CommentCardProps) {
                 variant="text"
                 color="gray"
                 className="flex items-center gap-1 flex-shrink-0"
+                placeholder=""
+                onPointerEnterCapture={() => {}}
+                onPointerLeaveCapture={() => {}}
               >
                 <ArrowUturnLeftIcon className="w-4 text-4 h-4" />
                 Reply
@@ -64,6 +89,9 @@ export function CommentCard({ img, name, desc, hours }: CommentCardProps) {
                 variant="text"
                 color="red"
                 className="flex items-center gap-1 flex-shrink-0"
+                placeholder=""
+                onPointerEnterCapture={() => {}}
+                onPointerLeaveCapture={() => {}}
               >
                 <HeartIcon className="w-4 text-4 h-4" />
                 Reply
@@ -76,4 +104,4 @@ export function CommentCard({ img, name, desc, hours }: CommentCardProps) {
   );
 }
 
-  export default CommentCard;
+export default CommentCard;
