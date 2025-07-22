@@ -39,7 +39,14 @@ export function Footer() {
 					<div className="grid grid-cols-3 justify-between gap-4">
 						{LINKS.map(({ title, items }) => (
 							<ul key={title}>
-								<Typography variant="h6" color="blue-gray" className="mb-4">
+								<Typography
+									variant="h6"
+									color="blue-gray"
+									className="mb-4"
+									placeholder=""
+									onPointerEnterCapture={() => {}}
+									onPointerLeaveCapture={() => {}}
+								>
 									{title}
 								</Typography>
 								{items.map((link) => (
@@ -48,7 +55,10 @@ export function Footer() {
 											as="a"
 											href="#"
 											variant="small"
-											className="py-1 font-normal !text-gray-700 transition-colors hover:!text-gray-900"
+											className="py-1.5 font-normal transition-colors hover:text-blue-500"
+											placeholder=""
+											onPointerEnterCapture={() => {}}
+											onPointerLeaveCapture={() => {}}
 										>
 											{link}
 										</Typography>
@@ -60,16 +70,31 @@ export function Footer() {
 				</div>
 				<div className="mt-16 flex flex-wrap items-end justify-center gap-y-4 gap-x-8 border-t border-blue-gray-50 py-6 md:justify-between">
 					<div className="text-center md:text-start">
-						<Typography variant="h4" color="blue-gray" className="mb-2">
+						<Typography
+							variant="h4"
+							color="blue-gray"
+							className="mb-2"
+							placeholder=""
+							onPointerEnterCapture={() => {}}
+							onPointerLeaveCapture={() => {}}
+						>
 							The reward for getting on the stage is fame.
 						</Typography>
-						<Typography className="font-normal !text-gray-700">
+						<Typography
+							className="font-normal !text-gray-700"
+							placeholder=""
+							onPointerEnterCapture={() => {}}
+							onPointerLeaveCapture={() => {}}
+						>
 							The price of fame is you can&apos;t get off the stage.
 						</Typography>
 					</div>
 					<Typography
 						color="gray"
 						className="text-center font-normal !text-gray-700"
+						placeholder=""
+						onPointerEnterCapture={() => {}}
+						onPointerLeaveCapture={() => {}}
 					>
 						&copy; {CURRENT_YEAR} Made with{" "}
 						<a href="https://www.material-tailwind.com" target="_blank">
