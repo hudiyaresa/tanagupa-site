@@ -105,7 +105,11 @@ export function Navbar() {
           ))}
         </ul>
         <div className="hidden items-center gap-2 lg:flex">
-          <Button variant="filled" color={pathname !== '/' ? "gray" : isScrolling ? "gray" : "black"} className="bg-black text-white hover:bg-gray-800">
+          <Button variant="filled" color={pathname !== '/' ? "gray" : isScrolling ? "gray" : "black"} className="bg-black text-white hover:bg-gray-800"
+            placeholder=""      
+            onPointerEnterCapture={() => {}}
+            onPointerLeaveCapture={() => {}}
+          >
             Log in
           </Button>
         </div>
