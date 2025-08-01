@@ -12,7 +12,7 @@ export let aduanList: Aduan[] = [
     id: 1,
     nama: "Mimi Peri",
     email: "mimi@peri.com",
-    isi: "Buayanya gigit jemuran mimi.",
+    isi: "Buayanya gigit jemuran.",
     tanggal: "2025-07-17",
     status: "terkirim",
   },

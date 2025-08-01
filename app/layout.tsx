@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
+import NextAuthSession from "./NextAuthSession";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -31,7 +32,11 @@ export default function RootLayout({
         />
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
       </head>
-      <body className={roboto.className}>{children}</body>
+      <body className={roboto.className}>
+        <NextAuthSession>
+          {children}
+        </NextAuthSession>
+      </body>
     </html>
   );
 }

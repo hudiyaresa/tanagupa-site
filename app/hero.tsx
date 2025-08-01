@@ -20,7 +20,7 @@ function Hero() {
           onPointerEnterCapture={() => {}}
           onPointerLeaveCapture={() => {}}
         >
-          Small pieces on Earth, where the shadows protect the world’s quiet miracles
+          Small pieces on Earth, where the shadows of the trees protect the world’s quiet miracles
         </Typography>
         <Typography
           variant="paragraph"
