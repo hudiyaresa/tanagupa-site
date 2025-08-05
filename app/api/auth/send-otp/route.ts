@@ -1,4 +1,4 @@
-import { PrismaClient } from "@/app/generated/prisma";
+import { PrismaClient } from "@prisma/client";
 import nodemailer from "nodemailer";
 
 const prisma = new PrismaClient();
@@ -6,7 +6,7 @@ const prisma = new PrismaClient();
 export async function POST(req: Request) {
   const { email } = await req.json();
 
-  const user = await prisma.users.findUnique({ where: { email } });
+  const user = await prisma.User.findUnique({ where: { email } });
   if (!user) return Response.json({ message: "User not found" }, { status: 404 });
 
   const otp = Math.floor(100000 + Math.random() * 900000).toString();

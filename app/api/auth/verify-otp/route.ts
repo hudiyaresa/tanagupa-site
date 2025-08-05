@@ -1,11 +1,11 @@
-import { PrismaClient } from "@/app/generated/prisma";
+import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
 export async function POST(req: Request) {
   const { email, otp } = await req.json();
 
-  const user = await prisma.users.findUnique({ where: { email } });
+  const user = await prisma.User.findUnique({ where: { email } });
   if (!user) return Response.json({ message: "User not found" }, { status: 404 });
 
   const otpRecord = await prisma.otps.findFirst({
@@ -22,7 +22,7 @@ export async function POST(req: Request) {
   await prisma.otps.delete({ where: { id: otpRecord.id } });
 
    // ✅ update verifiedAt
-  await prisma.users.update({
+  await prisma.user.update({
     where: { id: user.id },
     data: { verifiedAt: new Date() },
   });

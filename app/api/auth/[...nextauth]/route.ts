@@ -1,10 +1,9 @@
 import NextAuth from "next-auth";
-import { PrismaClient } from "@/app/generated/prisma";
-import bcrypt from "bcrypt";
+import { PrismaClient } from "@prisma/client";
+import bcrypt from "bcryptjs";
 import { z } from "zod";
 import { NextAuthOptions } from "next-auth";
 
-// Import your providers here
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
 
@@ -28,56 +27,89 @@ const authOptions: NextAuthOptions = {
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        const schema = z.object({
-          email: z.string().email(),
-          password: z.string().min(6),
-        });
+        try {
+          const schema = z.object({
+            email: z.string().email(),
+            password: z.string().min(6),
+          });
 
-        const { email, password } = schema.parse(credentials);
+          const { email, password } = schema.parse(credentials);
 
-        const user = await prisma.users.findUnique({ where: { email } });
+          const user = await prisma.user.findUnique({ where: { email } });
+          if (!user || !user.password || !user.verifiedAt) return null;
 
-        if (!user) throw new Error("No user found");
-        if (!user.password) throw new Error("No password set for user");
-        if (!user.verifiedAt) throw new Error("User not verified");
-        const valid = await bcrypt.compare(password, user.password);
-        if (!valid) throw new Error("Invalid password");
+          const valid = await bcrypt.compare(password, user.password);
+          if (!valid) return null;
 
-        return {
-          id: user.id,
-          email: user.email,
-          name: user.name
-        };
+          return {
+            id: user.id,
+            email: user.email,
+            name: user.name,
+            role: user.role,
+            status: user.status,
+          };
+        } catch (error) {
+          console.error("Authorize error:", error);
+          return null;
+        }
       },
     }),
   ],
   callbacks: {
     async signIn({ user, account }) {
-      if (account?.provider === "google") {
-        if (!user.email) throw new Error("No email from Google account");
+      try {
+        if (account?.provider === "google") {
+          if (!user.email) return false;
 
-        const existingUser = await prisma.users.findUnique({ where: { email: user.email } });
-
-        if (!existingUser) {
-          await prisma.users.create({
-            data: {
-              name: user.name || "",
-              email: user.email,
-              verifiedAt: new Date(),
-            },
-          });
-        } else if (!existingUser.verifiedAt) {
-          await prisma.users.update({
+          const existingUser = await prisma.user.findUnique({
             where: { email: user.email },
-            data: { verifiedAt: new Date() },
           });
+
+          if (!existingUser) {
+            await prisma.user.create({
+              data: {
+                name: user.name || "",
+                email: user.email,
+                verifiedAt: new Date(),
+                role: "USER",          // Default role
+                status: "ACTIVE",                  
+              },
+            });
+          } else if (!existingUser.verifiedAt) {
+            await prisma.user.update({
+              where: { email: user.email },
+              data: { verifiedAt: new Date() },
+            });
+          }
         }
+
+        return true;
+      } catch (error) {
+        console.error("SIGNIN ERROR", error);
+        return false; // Returning false triggers AccessDenied
       }
-      return true;
+    },
+    async jwt({ token, user }) {
+      if (user) {
+        token.id = user.id
+        token.role = (user as any).role
+        token.status = (user as any).status
+      }
+      return token;
+    },
+    async session({ session, token }) {
+      if (token?.id && session.user) {
+        session.user.id = token.id as string
+        session.user.role = token.role as string
+        session.user.status = token.status as string
+      }
+      return session;
     },
   },
   session: { strategy: "jwt" },
-  pages: { signIn: "/signin" },
+  pages: {
+    signIn: "/signin",
+  },
   secret: process.env.NEXTAUTH_SECRET,
 };
 
