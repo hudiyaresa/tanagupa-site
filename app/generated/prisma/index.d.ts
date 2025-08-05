@@ -14,15 +14,15 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
 
 
 /**
- * Model users
+ * Model Users
  * 
  */
-export type users = $Result.DefaultSelection<Prisma.$usersPayload>
+export type Users = $Result.DefaultSelection<Prisma.$UsersPayload>
 /**
- * Model otps
+ * Model Otps
  * 
  */
-export type otps = $Result.DefaultSelection<Prisma.$otpsPayload>
+export type Otps = $Result.DefaultSelection<Prisma.$OtpsPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -150,24 +150,24 @@ export class PrismaClient<
   }>>
 
       /**
-   * `prisma.users`: Exposes CRUD operations for the **users** model.
+   * `prisma.users`: Exposes CRUD operations for the **Users** model.
     * Example usage:
     * ```ts
     * // Fetch zero or more Users
     * const users = await prisma.users.findMany()
     * ```
     */
-  get users(): Prisma.usersDelegate<ExtArgs, ClientOptions>;
+  get users(): Prisma.UsersDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.otps`: Exposes CRUD operations for the **otps** model.
+   * `prisma.otps`: Exposes CRUD operations for the **Otps** model.
     * Example usage:
     * ```ts
     * // Fetch zero or more Otps
     * const otps = await prisma.otps.findMany()
     * ```
     */
-  get otps(): Prisma.otpsDelegate<ExtArgs, ClientOptions>;
+  get otps(): Prisma.OtpsDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -608,8 +608,8 @@ export namespace Prisma {
 
 
   export const ModelName: {
-    users: 'users',
-    otps: 'otps'
+    Users: 'Users',
+    Otps: 'Otps'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -632,150 +632,150 @@ export namespace Prisma {
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
-      users: {
-        payload: Prisma.$usersPayload<ExtArgs>
-        fields: Prisma.usersFieldRefs
+      Users: {
+        payload: Prisma.$UsersPayload<ExtArgs>
+        fields: Prisma.UsersFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.usersFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$usersPayload> | null
+            args: Prisma.UsersFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UsersPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.usersFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$usersPayload>
+            args: Prisma.UsersFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UsersPayload>
           }
           findFirst: {
-            args: Prisma.usersFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$usersPayload> | null
+            args: Prisma.UsersFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UsersPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.usersFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$usersPayload>
+            args: Prisma.UsersFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UsersPayload>
           }
           findMany: {
-            args: Prisma.usersFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$usersPayload>[]
+            args: Prisma.UsersFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UsersPayload>[]
           }
           create: {
-            args: Prisma.usersCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$usersPayload>
+            args: Prisma.UsersCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UsersPayload>
           }
           createMany: {
-            args: Prisma.usersCreateManyArgs<ExtArgs>
+            args: Prisma.UsersCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.usersCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$usersPayload>[]
+            args: Prisma.UsersCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UsersPayload>[]
           }
           delete: {
-            args: Prisma.usersDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$usersPayload>
+            args: Prisma.UsersDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UsersPayload>
           }
           update: {
-            args: Prisma.usersUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$usersPayload>
+            args: Prisma.UsersUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UsersPayload>
           }
           deleteMany: {
-            args: Prisma.usersDeleteManyArgs<ExtArgs>
+            args: Prisma.UsersDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.usersUpdateManyArgs<ExtArgs>
+            args: Prisma.UsersUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.usersUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$usersPayload>[]
+            args: Prisma.UsersUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UsersPayload>[]
           }
           upsert: {
-            args: Prisma.usersUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$usersPayload>
+            args: Prisma.UsersUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UsersPayload>
           }
           aggregate: {
             args: Prisma.UsersAggregateArgs<ExtArgs>
             result: $Utils.Optional<AggregateUsers>
           }
           groupBy: {
-            args: Prisma.usersGroupByArgs<ExtArgs>
+            args: Prisma.UsersGroupByArgs<ExtArgs>
             result: $Utils.Optional<UsersGroupByOutputType>[]
           }
           count: {
-            args: Prisma.usersCountArgs<ExtArgs>
+            args: Prisma.UsersCountArgs<ExtArgs>
             result: $Utils.Optional<UsersCountAggregateOutputType> | number
           }
         }
       }
-      otps: {
-        payload: Prisma.$otpsPayload<ExtArgs>
-        fields: Prisma.otpsFieldRefs
+      Otps: {
+        payload: Prisma.$OtpsPayload<ExtArgs>
+        fields: Prisma.OtpsFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.otpsFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$otpsPayload> | null
+            args: Prisma.OtpsFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$OtpsPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.otpsFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$otpsPayload>
+            args: Prisma.OtpsFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$OtpsPayload>
           }
           findFirst: {
-            args: Prisma.otpsFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$otpsPayload> | null
+            args: Prisma.OtpsFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$OtpsPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.otpsFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$otpsPayload>
+            args: Prisma.OtpsFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$OtpsPayload>
           }
           findMany: {
-            args: Prisma.otpsFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$otpsPayload>[]
+            args: Prisma.OtpsFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$OtpsPayload>[]
           }
           create: {
-            args: Prisma.otpsCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$otpsPayload>
+            args: Prisma.OtpsCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$OtpsPayload>
           }
           createMany: {
-            args: Prisma.otpsCreateManyArgs<ExtArgs>
+            args: Prisma.OtpsCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.otpsCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$otpsPayload>[]
+            args: Prisma.OtpsCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$OtpsPayload>[]
           }
           delete: {
-            args: Prisma.otpsDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$otpsPayload>
+            args: Prisma.OtpsDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$OtpsPayload>
           }
           update: {
-            args: Prisma.otpsUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$otpsPayload>
+            args: Prisma.OtpsUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$OtpsPayload>
           }
           deleteMany: {
-            args: Prisma.otpsDeleteManyArgs<ExtArgs>
+            args: Prisma.OtpsDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.otpsUpdateManyArgs<ExtArgs>
+            args: Prisma.OtpsUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.otpsUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$otpsPayload>[]
+            args: Prisma.OtpsUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$OtpsPayload>[]
           }
           upsert: {
-            args: Prisma.otpsUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$otpsPayload>
+            args: Prisma.OtpsUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$OtpsPayload>
           }
           aggregate: {
             args: Prisma.OtpsAggregateArgs<ExtArgs>
             result: $Utils.Optional<AggregateOtps>
           }
           groupBy: {
-            args: Prisma.otpsGroupByArgs<ExtArgs>
+            args: Prisma.OtpsGroupByArgs<ExtArgs>
             result: $Utils.Optional<OtpsGroupByOutputType>[]
           }
           count: {
-            args: Prisma.otpsCountArgs<ExtArgs>
+            args: Prisma.OtpsCountArgs<ExtArgs>
             result: $Utils.Optional<OtpsCountAggregateOutputType> | number
           }
         }
@@ -872,8 +872,8 @@ export namespace Prisma {
     omit?: Prisma.GlobalOmitConfig
   }
   export type GlobalOmitConfig = {
-    users?: usersOmit
-    otps?: otpsOmit
+    users?: UsersOmit
+    otps?: OtpsOmit
   }
 
   /* Types for Logging */
@@ -995,7 +995,7 @@ export namespace Prisma {
    * UsersCountOutputType without action
    */
   export type UsersCountOutputTypeCountOtpsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: otpsWhereInput
+    where?: OtpsWhereInput
   }
 
 
@@ -1004,7 +1004,7 @@ export namespace Prisma {
    */
 
   /**
-   * Model users
+   * Model Users
    */
 
   export type AggregateUsers = {
@@ -1078,37 +1078,37 @@ export namespace Prisma {
 
   export type UsersAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which users to aggregate.
+     * Filter which Users to aggregate.
      */
-    where?: usersWhereInput
+    where?: UsersWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of users to fetch.
+     * Determine the order of Users to fetch.
      */
-    orderBy?: usersOrderByWithRelationInput | usersOrderByWithRelationInput[]
+    orderBy?: UsersOrderByWithRelationInput | UsersOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: usersWhereUniqueInput
+    cursor?: UsersWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` users from the position of the cursor.
+     * Take `±n` Users from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` users.
+     * Skip the first `n` Users.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned users
+     * Count returned Users
     **/
     _count?: true | UsersCountAggregateInputType
     /**
@@ -1136,11 +1136,11 @@ export namespace Prisma {
 
 
 
-  export type usersGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: usersWhereInput
-    orderBy?: usersOrderByWithAggregationInput | usersOrderByWithAggregationInput[]
+  export type UsersGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: UsersWhereInput
+    orderBy?: UsersOrderByWithAggregationInput | UsersOrderByWithAggregationInput[]
     by: UsersScalarFieldEnum[] | UsersScalarFieldEnum
-    having?: usersScalarWhereWithAggregatesInput
+    having?: UsersScalarWhereWithAggregatesInput
     take?: number
     skip?: number
     _count?: UsersCountAggregateInputType | true
@@ -1161,7 +1161,7 @@ export namespace Prisma {
     _max: UsersMaxAggregateOutputType | null
   }
 
-  type GetUsersGroupByPayload<T extends usersGroupByArgs> = Prisma.PrismaPromise<
+  type GetUsersGroupByPayload<T extends UsersGroupByArgs> = Prisma.PrismaPromise<
     Array<
       PickEnumerable<UsersGroupByOutputType, T['by']> &
         {
@@ -1175,7 +1175,7 @@ export namespace Prisma {
     >
 
 
-  export type usersSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type UsersSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
     email?: boolean
@@ -1183,11 +1183,11 @@ export namespace Prisma {
     verifiedAt?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-    otps?: boolean | users$otpsArgs<ExtArgs>
+    otps?: boolean | Users$otpsArgs<ExtArgs>
     _count?: boolean | UsersCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["users"]>
 
-  export type usersSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type UsersSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
     email?: boolean
@@ -1197,7 +1197,7 @@ export namespace Prisma {
     updatedAt?: boolean
   }, ExtArgs["result"]["users"]>
 
-  export type usersSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type UsersSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
     email?: boolean
@@ -1207,7 +1207,7 @@ export namespace Prisma {
     updatedAt?: boolean
   }, ExtArgs["result"]["users"]>
 
-  export type usersSelectScalar = {
+  export type UsersSelectScalar = {
     id?: boolean
     name?: boolean
     email?: boolean
@@ -1217,18 +1217,18 @@ export namespace Prisma {
     updatedAt?: boolean
   }
 
-  export type usersOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "email" | "password" | "verifiedAt" | "createdAt" | "updatedAt", ExtArgs["result"]["users"]>
-  export type usersInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    otps?: boolean | users$otpsArgs<ExtArgs>
+  export type UsersOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "email" | "password" | "verifiedAt" | "createdAt" | "updatedAt", ExtArgs["result"]["users"]>
+  export type UsersInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    otps?: boolean | Users$otpsArgs<ExtArgs>
     _count?: boolean | UsersCountOutputTypeDefaultArgs<ExtArgs>
   }
-  export type usersIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
-  export type usersIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type UsersIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type UsersIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
 
-  export type $usersPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "users"
+  export type $UsersPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Users"
     objects: {
-      otps: Prisma.$otpsPayload<ExtArgs>[]
+      otps: Prisma.$OtpsPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -1242,18 +1242,18 @@ export namespace Prisma {
     composites: {}
   }
 
-  type usersGetPayload<S extends boolean | null | undefined | usersDefaultArgs> = $Result.GetResult<Prisma.$usersPayload, S>
+  type UsersGetPayload<S extends boolean | null | undefined | UsersDefaultArgs> = $Result.GetResult<Prisma.$UsersPayload, S>
 
-  type usersCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<usersFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+  type UsersCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<UsersFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
       select?: UsersCountAggregateInputType | true
     }
 
-  export interface usersDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['users'], meta: { name: 'users' } }
+  export interface UsersDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Users'], meta: { name: 'Users' } }
     /**
      * Find zero or one Users that matches the filter.
-     * @param {usersFindUniqueArgs} args - Arguments to find a Users
+     * @param {UsersFindUniqueArgs} args - Arguments to find a Users
      * @example
      * // Get one Users
      * const users = await prisma.users.findUnique({
@@ -1262,12 +1262,12 @@ export namespace Prisma {
      *   }
      * })
      */
-    findUnique<T extends usersFindUniqueArgs>(args: SelectSubset<T, usersFindUniqueArgs<ExtArgs>>): Prisma__usersClient<$Result.GetResult<Prisma.$usersPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends UsersFindUniqueArgs>(args: SelectSubset<T, UsersFindUniqueArgs<ExtArgs>>): Prisma__UsersClient<$Result.GetResult<Prisma.$UsersPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find one Users that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {usersFindUniqueOrThrowArgs} args - Arguments to find a Users
+     * @param {UsersFindUniqueOrThrowArgs} args - Arguments to find a Users
      * @example
      * // Get one Users
      * const users = await prisma.users.findUniqueOrThrow({
@@ -1276,13 +1276,13 @@ export namespace Prisma {
      *   }
      * })
      */
-    findUniqueOrThrow<T extends usersFindUniqueOrThrowArgs>(args: SelectSubset<T, usersFindUniqueOrThrowArgs<ExtArgs>>): Prisma__usersClient<$Result.GetResult<Prisma.$usersPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends UsersFindUniqueOrThrowArgs>(args: SelectSubset<T, UsersFindUniqueOrThrowArgs<ExtArgs>>): Prisma__UsersClient<$Result.GetResult<Prisma.$UsersPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find the first Users that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {usersFindFirstArgs} args - Arguments to find a Users
+     * @param {UsersFindFirstArgs} args - Arguments to find a Users
      * @example
      * // Get one Users
      * const users = await prisma.users.findFirst({
@@ -1291,14 +1291,14 @@ export namespace Prisma {
      *   }
      * })
      */
-    findFirst<T extends usersFindFirstArgs>(args?: SelectSubset<T, usersFindFirstArgs<ExtArgs>>): Prisma__usersClient<$Result.GetResult<Prisma.$usersPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends UsersFindFirstArgs>(args?: SelectSubset<T, UsersFindFirstArgs<ExtArgs>>): Prisma__UsersClient<$Result.GetResult<Prisma.$UsersPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find the first Users that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {usersFindFirstOrThrowArgs} args - Arguments to find a Users
+     * @param {UsersFindFirstOrThrowArgs} args - Arguments to find a Users
      * @example
      * // Get one Users
      * const users = await prisma.users.findFirstOrThrow({
@@ -1307,13 +1307,13 @@ export namespace Prisma {
      *   }
      * })
      */
-    findFirstOrThrow<T extends usersFindFirstOrThrowArgs>(args?: SelectSubset<T, usersFindFirstOrThrowArgs<ExtArgs>>): Prisma__usersClient<$Result.GetResult<Prisma.$usersPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends UsersFindFirstOrThrowArgs>(args?: SelectSubset<T, UsersFindFirstOrThrowArgs<ExtArgs>>): Prisma__UsersClient<$Result.GetResult<Prisma.$UsersPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find zero or more Users that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {usersFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {UsersFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
      * // Get all Users
      * const users = await prisma.users.findMany()
@@ -1325,11 +1325,11 @@ export namespace Prisma {
      * const usersWithIdOnly = await prisma.users.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends usersFindManyArgs>(args?: SelectSubset<T, usersFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$usersPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends UsersFindManyArgs>(args?: SelectSubset<T, UsersFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UsersPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
      * Create a Users.
-     * @param {usersCreateArgs} args - Arguments to create a Users.
+     * @param {UsersCreateArgs} args - Arguments to create a Users.
      * @example
      * // Create one Users
      * const Users = await prisma.users.create({
@@ -1339,11 +1339,11 @@ export namespace Prisma {
      * })
      * 
      */
-    create<T extends usersCreateArgs>(args: SelectSubset<T, usersCreateArgs<ExtArgs>>): Prisma__usersClient<$Result.GetResult<Prisma.$usersPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends UsersCreateArgs>(args: SelectSubset<T, UsersCreateArgs<ExtArgs>>): Prisma__UsersClient<$Result.GetResult<Prisma.$UsersPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Create many Users.
-     * @param {usersCreateManyArgs} args - Arguments to create many Users.
+     * @param {UsersCreateManyArgs} args - Arguments to create many Users.
      * @example
      * // Create many Users
      * const users = await prisma.users.createMany({
@@ -1353,11 +1353,11 @@ export namespace Prisma {
      * })
      *     
      */
-    createMany<T extends usersCreateManyArgs>(args?: SelectSubset<T, usersCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends UsersCreateManyArgs>(args?: SelectSubset<T, UsersCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Create many Users and returns the data saved in the database.
-     * @param {usersCreateManyAndReturnArgs} args - Arguments to create many Users.
+     * @param {UsersCreateManyAndReturnArgs} args - Arguments to create many Users.
      * @example
      * // Create many Users
      * const users = await prisma.users.createManyAndReturn({
@@ -1377,11 +1377,11 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends usersCreateManyAndReturnArgs>(args?: SelectSubset<T, usersCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$usersPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends UsersCreateManyAndReturnArgs>(args?: SelectSubset<T, UsersCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UsersPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Delete a Users.
-     * @param {usersDeleteArgs} args - Arguments to delete one Users.
+     * @param {UsersDeleteArgs} args - Arguments to delete one Users.
      * @example
      * // Delete one Users
      * const Users = await prisma.users.delete({
@@ -1391,11 +1391,11 @@ export namespace Prisma {
      * })
      * 
      */
-    delete<T extends usersDeleteArgs>(args: SelectSubset<T, usersDeleteArgs<ExtArgs>>): Prisma__usersClient<$Result.GetResult<Prisma.$usersPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends UsersDeleteArgs>(args: SelectSubset<T, UsersDeleteArgs<ExtArgs>>): Prisma__UsersClient<$Result.GetResult<Prisma.$UsersPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Update one Users.
-     * @param {usersUpdateArgs} args - Arguments to update one Users.
+     * @param {UsersUpdateArgs} args - Arguments to update one Users.
      * @example
      * // Update one Users
      * const users = await prisma.users.update({
@@ -1408,11 +1408,11 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends usersUpdateArgs>(args: SelectSubset<T, usersUpdateArgs<ExtArgs>>): Prisma__usersClient<$Result.GetResult<Prisma.$usersPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends UsersUpdateArgs>(args: SelectSubset<T, UsersUpdateArgs<ExtArgs>>): Prisma__UsersClient<$Result.GetResult<Prisma.$UsersPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Delete zero or more Users.
-     * @param {usersDeleteManyArgs} args - Arguments to filter Users to delete.
+     * @param {UsersDeleteManyArgs} args - Arguments to filter Users to delete.
      * @example
      * // Delete a few Users
      * const { count } = await prisma.users.deleteMany({
@@ -1422,13 +1422,13 @@ export namespace Prisma {
      * })
      * 
      */
-    deleteMany<T extends usersDeleteManyArgs>(args?: SelectSubset<T, usersDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends UsersDeleteManyArgs>(args?: SelectSubset<T, UsersDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Users.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {usersUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {UsersUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
      * // Update many Users
      * const users = await prisma.users.updateMany({
@@ -1441,11 +1441,11 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends usersUpdateManyArgs>(args: SelectSubset<T, usersUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends UsersUpdateManyArgs>(args: SelectSubset<T, UsersUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Users and returns the data updated in the database.
-     * @param {usersUpdateManyAndReturnArgs} args - Arguments to update many Users.
+     * @param {UsersUpdateManyAndReturnArgs} args - Arguments to update many Users.
      * @example
      * // Update many Users
      * const users = await prisma.users.updateManyAndReturn({
@@ -1471,11 +1471,11 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends usersUpdateManyAndReturnArgs>(args: SelectSubset<T, usersUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$usersPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends UsersUpdateManyAndReturnArgs>(args: SelectSubset<T, UsersUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UsersPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Users.
-     * @param {usersUpsertArgs} args - Arguments to update or create a Users.
+     * @param {UsersUpsertArgs} args - Arguments to update or create a Users.
      * @example
      * // Update or create a Users
      * const users = await prisma.users.upsert({
@@ -1490,14 +1490,14 @@ export namespace Prisma {
      *   }
      * })
      */
-    upsert<T extends usersUpsertArgs>(args: SelectSubset<T, usersUpsertArgs<ExtArgs>>): Prisma__usersClient<$Result.GetResult<Prisma.$usersPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends UsersUpsertArgs>(args: SelectSubset<T, UsersUpsertArgs<ExtArgs>>): Prisma__UsersClient<$Result.GetResult<Prisma.$UsersPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
      * Count the number of Users.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {usersCountArgs} args - Arguments to filter Users to count.
+     * @param {UsersCountArgs} args - Arguments to filter Users to count.
      * @example
      * // Count the number of Users
      * const count = await prisma.users.count({
@@ -1506,8 +1506,8 @@ export namespace Prisma {
      *   }
      * })
     **/
-    count<T extends usersCountArgs>(
-      args?: Subset<T, usersCountArgs>,
+    count<T extends UsersCountArgs>(
+      args?: Subset<T, UsersCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
@@ -1546,7 +1546,7 @@ export namespace Prisma {
      * Group by Users.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {usersGroupByArgs} args - Group by arguments.
+     * @param {UsersGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -1561,14 +1561,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends usersGroupByArgs,
+      T extends UsersGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: usersGroupByArgs['orderBy'] }
-        : { orderBy?: usersGroupByArgs['orderBy'] },
+        ? { orderBy: UsersGroupByArgs['orderBy'] }
+        : { orderBy?: UsersGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -1617,22 +1617,22 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, usersGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetUsersGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, UsersGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetUsersGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the users model
+   * Fields of the Users model
    */
-  readonly fields: usersFieldRefs;
+  readonly fields: UsersFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for users.
+   * The delegate class that acts as a "Promise-like" for Users.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__usersClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__UsersClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    otps<T extends users$otpsArgs<ExtArgs> = {}>(args?: Subset<T, users$otpsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$otpsPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    otps<T extends Users$otpsArgs<ExtArgs> = {}>(args?: Subset<T, Users$otpsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$OtpsPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1659,448 +1659,448 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the users model
+   * Fields of the Users model
    */
-  interface usersFieldRefs {
-    readonly id: FieldRef<"users", 'String'>
-    readonly name: FieldRef<"users", 'String'>
-    readonly email: FieldRef<"users", 'String'>
-    readonly password: FieldRef<"users", 'String'>
-    readonly verifiedAt: FieldRef<"users", 'DateTime'>
-    readonly createdAt: FieldRef<"users", 'DateTime'>
-    readonly updatedAt: FieldRef<"users", 'DateTime'>
+  interface UsersFieldRefs {
+    readonly id: FieldRef<"Users", 'String'>
+    readonly name: FieldRef<"Users", 'String'>
+    readonly email: FieldRef<"Users", 'String'>
+    readonly password: FieldRef<"Users", 'String'>
+    readonly verifiedAt: FieldRef<"Users", 'DateTime'>
+    readonly createdAt: FieldRef<"Users", 'DateTime'>
+    readonly updatedAt: FieldRef<"Users", 'DateTime'>
   }
     
 
   // Custom InputTypes
   /**
-   * users findUnique
+   * Users findUnique
    */
-  export type usersFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UsersFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the users
+     * Select specific fields to fetch from the Users
      */
-    select?: usersSelect<ExtArgs> | null
+    select?: UsersSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the users
+     * Omit specific fields from the Users
      */
-    omit?: usersOmit<ExtArgs> | null
+    omit?: UsersOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: usersInclude<ExtArgs> | null
+    include?: UsersInclude<ExtArgs> | null
     /**
-     * Filter, which users to fetch.
+     * Filter, which Users to fetch.
      */
-    where: usersWhereUniqueInput
+    where: UsersWhereUniqueInput
   }
 
   /**
-   * users findUniqueOrThrow
+   * Users findUniqueOrThrow
    */
-  export type usersFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UsersFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the users
+     * Select specific fields to fetch from the Users
      */
-    select?: usersSelect<ExtArgs> | null
+    select?: UsersSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the users
+     * Omit specific fields from the Users
      */
-    omit?: usersOmit<ExtArgs> | null
+    omit?: UsersOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: usersInclude<ExtArgs> | null
+    include?: UsersInclude<ExtArgs> | null
     /**
-     * Filter, which users to fetch.
+     * Filter, which Users to fetch.
      */
-    where: usersWhereUniqueInput
+    where: UsersWhereUniqueInput
   }
 
   /**
-   * users findFirst
+   * Users findFirst
    */
-  export type usersFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UsersFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the users
+     * Select specific fields to fetch from the Users
      */
-    select?: usersSelect<ExtArgs> | null
+    select?: UsersSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the users
+     * Omit specific fields from the Users
      */
-    omit?: usersOmit<ExtArgs> | null
+    omit?: UsersOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: usersInclude<ExtArgs> | null
+    include?: UsersInclude<ExtArgs> | null
     /**
-     * Filter, which users to fetch.
+     * Filter, which Users to fetch.
      */
-    where?: usersWhereInput
+    where?: UsersWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of users to fetch.
+     * Determine the order of Users to fetch.
      */
-    orderBy?: usersOrderByWithRelationInput | usersOrderByWithRelationInput[]
+    orderBy?: UsersOrderByWithRelationInput | UsersOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for users.
+     * Sets the position for searching for Users.
      */
-    cursor?: usersWhereUniqueInput
+    cursor?: UsersWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` users from the position of the cursor.
+     * Take `±n` Users from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` users.
+     * Skip the first `n` Users.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of users.
+     * Filter by unique combinations of Users.
      */
     distinct?: UsersScalarFieldEnum | UsersScalarFieldEnum[]
   }
 
   /**
-   * users findFirstOrThrow
+   * Users findFirstOrThrow
    */
-  export type usersFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UsersFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the users
+     * Select specific fields to fetch from the Users
      */
-    select?: usersSelect<ExtArgs> | null
+    select?: UsersSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the users
+     * Omit specific fields from the Users
      */
-    omit?: usersOmit<ExtArgs> | null
+    omit?: UsersOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: usersInclude<ExtArgs> | null
+    include?: UsersInclude<ExtArgs> | null
     /**
-     * Filter, which users to fetch.
+     * Filter, which Users to fetch.
      */
-    where?: usersWhereInput
+    where?: UsersWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of users to fetch.
+     * Determine the order of Users to fetch.
      */
-    orderBy?: usersOrderByWithRelationInput | usersOrderByWithRelationInput[]
+    orderBy?: UsersOrderByWithRelationInput | UsersOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for users.
+     * Sets the position for searching for Users.
      */
-    cursor?: usersWhereUniqueInput
+    cursor?: UsersWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` users from the position of the cursor.
+     * Take `±n` Users from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` users.
+     * Skip the first `n` Users.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of users.
+     * Filter by unique combinations of Users.
      */
     distinct?: UsersScalarFieldEnum | UsersScalarFieldEnum[]
   }
 
   /**
-   * users findMany
+   * Users findMany
    */
-  export type usersFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UsersFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the users
+     * Select specific fields to fetch from the Users
      */
-    select?: usersSelect<ExtArgs> | null
+    select?: UsersSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the users
+     * Omit specific fields from the Users
      */
-    omit?: usersOmit<ExtArgs> | null
+    omit?: UsersOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: usersInclude<ExtArgs> | null
+    include?: UsersInclude<ExtArgs> | null
     /**
-     * Filter, which users to fetch.
+     * Filter, which Users to fetch.
      */
-    where?: usersWhereInput
+    where?: UsersWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of users to fetch.
+     * Determine the order of Users to fetch.
      */
-    orderBy?: usersOrderByWithRelationInput | usersOrderByWithRelationInput[]
+    orderBy?: UsersOrderByWithRelationInput | UsersOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing users.
+     * Sets the position for listing Users.
      */
-    cursor?: usersWhereUniqueInput
+    cursor?: UsersWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` users from the position of the cursor.
+     * Take `±n` Users from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` users.
+     * Skip the first `n` Users.
      */
     skip?: number
     distinct?: UsersScalarFieldEnum | UsersScalarFieldEnum[]
   }
 
   /**
-   * users create
+   * Users create
    */
-  export type usersCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UsersCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the users
+     * Select specific fields to fetch from the Users
      */
-    select?: usersSelect<ExtArgs> | null
+    select?: UsersSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the users
+     * Omit specific fields from the Users
      */
-    omit?: usersOmit<ExtArgs> | null
+    omit?: UsersOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: usersInclude<ExtArgs> | null
+    include?: UsersInclude<ExtArgs> | null
     /**
-     * The data needed to create a users.
+     * The data needed to create a Users.
      */
-    data: XOR<usersCreateInput, usersUncheckedCreateInput>
+    data: XOR<UsersCreateInput, UsersUncheckedCreateInput>
   }
 
   /**
-   * users createMany
+   * Users createMany
    */
-  export type usersCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UsersCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many users.
+     * The data used to create many Users.
      */
-    data: usersCreateManyInput | usersCreateManyInput[]
+    data: UsersCreateManyInput | UsersCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * users createManyAndReturn
+   * Users createManyAndReturn
    */
-  export type usersCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UsersCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the users
+     * Select specific fields to fetch from the Users
      */
-    select?: usersSelectCreateManyAndReturn<ExtArgs> | null
+    select?: UsersSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the users
+     * Omit specific fields from the Users
      */
-    omit?: usersOmit<ExtArgs> | null
+    omit?: UsersOmit<ExtArgs> | null
     /**
-     * The data used to create many users.
+     * The data used to create many Users.
      */
-    data: usersCreateManyInput | usersCreateManyInput[]
+    data: UsersCreateManyInput | UsersCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * users update
+   * Users update
    */
-  export type usersUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UsersUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the users
+     * Select specific fields to fetch from the Users
      */
-    select?: usersSelect<ExtArgs> | null
+    select?: UsersSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the users
+     * Omit specific fields from the Users
      */
-    omit?: usersOmit<ExtArgs> | null
+    omit?: UsersOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: usersInclude<ExtArgs> | null
+    include?: UsersInclude<ExtArgs> | null
     /**
-     * The data needed to update a users.
+     * The data needed to update a Users.
      */
-    data: XOR<usersUpdateInput, usersUncheckedUpdateInput>
+    data: XOR<UsersUpdateInput, UsersUncheckedUpdateInput>
     /**
-     * Choose, which users to update.
+     * Choose, which Users to update.
      */
-    where: usersWhereUniqueInput
+    where: UsersWhereUniqueInput
   }
 
   /**
-   * users updateMany
+   * Users updateMany
    */
-  export type usersUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UsersUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update users.
+     * The data used to update Users.
      */
-    data: XOR<usersUpdateManyMutationInput, usersUncheckedUpdateManyInput>
+    data: XOR<UsersUpdateManyMutationInput, UsersUncheckedUpdateManyInput>
     /**
-     * Filter which users to update
+     * Filter which Users to update
      */
-    where?: usersWhereInput
+    where?: UsersWhereInput
     /**
-     * Limit how many users to update.
+     * Limit how many Users to update.
      */
     limit?: number
   }
 
   /**
-   * users updateManyAndReturn
+   * Users updateManyAndReturn
    */
-  export type usersUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UsersUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the users
+     * Select specific fields to fetch from the Users
      */
-    select?: usersSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: UsersSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the users
+     * Omit specific fields from the Users
      */
-    omit?: usersOmit<ExtArgs> | null
+    omit?: UsersOmit<ExtArgs> | null
     /**
-     * The data used to update users.
+     * The data used to update Users.
      */
-    data: XOR<usersUpdateManyMutationInput, usersUncheckedUpdateManyInput>
+    data: XOR<UsersUpdateManyMutationInput, UsersUncheckedUpdateManyInput>
     /**
-     * Filter which users to update
+     * Filter which Users to update
      */
-    where?: usersWhereInput
+    where?: UsersWhereInput
     /**
-     * Limit how many users to update.
+     * Limit how many Users to update.
      */
     limit?: number
   }
 
   /**
-   * users upsert
+   * Users upsert
    */
-  export type usersUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UsersUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the users
+     * Select specific fields to fetch from the Users
      */
-    select?: usersSelect<ExtArgs> | null
+    select?: UsersSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the users
+     * Omit specific fields from the Users
      */
-    omit?: usersOmit<ExtArgs> | null
+    omit?: UsersOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: usersInclude<ExtArgs> | null
+    include?: UsersInclude<ExtArgs> | null
     /**
-     * The filter to search for the users to update in case it exists.
+     * The filter to search for the Users to update in case it exists.
      */
-    where: usersWhereUniqueInput
+    where: UsersWhereUniqueInput
     /**
-     * In case the users found by the `where` argument doesn't exist, create a new users with this data.
+     * In case the Users found by the `where` argument doesn't exist, create a new Users with this data.
      */
-    create: XOR<usersCreateInput, usersUncheckedCreateInput>
+    create: XOR<UsersCreateInput, UsersUncheckedCreateInput>
     /**
-     * In case the users was found with the provided `where` argument, update it with this data.
+     * In case the Users was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<usersUpdateInput, usersUncheckedUpdateInput>
+    update: XOR<UsersUpdateInput, UsersUncheckedUpdateInput>
   }
 
   /**
-   * users delete
+   * Users delete
    */
-  export type usersDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UsersDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the users
+     * Select specific fields to fetch from the Users
      */
-    select?: usersSelect<ExtArgs> | null
+    select?: UsersSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the users
+     * Omit specific fields from the Users
      */
-    omit?: usersOmit<ExtArgs> | null
+    omit?: UsersOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: usersInclude<ExtArgs> | null
+    include?: UsersInclude<ExtArgs> | null
     /**
-     * Filter which users to delete.
+     * Filter which Users to delete.
      */
-    where: usersWhereUniqueInput
+    where: UsersWhereUniqueInput
   }
 
   /**
-   * users deleteMany
+   * Users deleteMany
    */
-  export type usersDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UsersDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which users to delete
+     * Filter which Users to delete
      */
-    where?: usersWhereInput
+    where?: UsersWhereInput
     /**
-     * Limit how many users to delete.
+     * Limit how many Users to delete.
      */
     limit?: number
   }
 
   /**
-   * users.otps
+   * Users.otps
    */
-  export type users$otpsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type Users$otpsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the otps
+     * Select specific fields to fetch from the Otps
      */
-    select?: otpsSelect<ExtArgs> | null
+    select?: OtpsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the otps
+     * Omit specific fields from the Otps
      */
-    omit?: otpsOmit<ExtArgs> | null
+    omit?: OtpsOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: otpsInclude<ExtArgs> | null
-    where?: otpsWhereInput
-    orderBy?: otpsOrderByWithRelationInput | otpsOrderByWithRelationInput[]
-    cursor?: otpsWhereUniqueInput
+    include?: OtpsInclude<ExtArgs> | null
+    where?: OtpsWhereInput
+    orderBy?: OtpsOrderByWithRelationInput | OtpsOrderByWithRelationInput[]
+    cursor?: OtpsWhereUniqueInput
     take?: number
     skip?: number
     distinct?: OtpsScalarFieldEnum | OtpsScalarFieldEnum[]
   }
 
   /**
-   * users without action
+   * Users without action
    */
-  export type usersDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UsersDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the users
+     * Select specific fields to fetch from the Users
      */
-    select?: usersSelect<ExtArgs> | null
+    select?: UsersSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the users
+     * Omit specific fields from the Users
      */
-    omit?: usersOmit<ExtArgs> | null
+    omit?: UsersOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: usersInclude<ExtArgs> | null
+    include?: UsersInclude<ExtArgs> | null
   }
 
 
   /**
-   * Model otps
+   * Model Otps
    */
 
   export type AggregateOtps = {
@@ -2168,37 +2168,37 @@ export namespace Prisma {
 
   export type OtpsAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which otps to aggregate.
+     * Filter which Otps to aggregate.
      */
-    where?: otpsWhereInput
+    where?: OtpsWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of otps to fetch.
+     * Determine the order of Otps to fetch.
      */
-    orderBy?: otpsOrderByWithRelationInput | otpsOrderByWithRelationInput[]
+    orderBy?: OtpsOrderByWithRelationInput | OtpsOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: otpsWhereUniqueInput
+    cursor?: OtpsWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` otps from the position of the cursor.
+     * Take `±n` Otps from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` otps.
+     * Skip the first `n` Otps.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned otps
+     * Count returned Otps
     **/
     _count?: true | OtpsCountAggregateInputType
     /**
@@ -2226,11 +2226,11 @@ export namespace Prisma {
 
 
 
-  export type otpsGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: otpsWhereInput
-    orderBy?: otpsOrderByWithAggregationInput | otpsOrderByWithAggregationInput[]
+  export type OtpsGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: OtpsWhereInput
+    orderBy?: OtpsOrderByWithAggregationInput | OtpsOrderByWithAggregationInput[]
     by: OtpsScalarFieldEnum[] | OtpsScalarFieldEnum
-    having?: otpsScalarWhereWithAggregatesInput
+    having?: OtpsScalarWhereWithAggregatesInput
     take?: number
     skip?: number
     _count?: OtpsCountAggregateInputType | true
@@ -2250,7 +2250,7 @@ export namespace Prisma {
     _max: OtpsMaxAggregateOutputType | null
   }
 
-  type GetOtpsGroupByPayload<T extends otpsGroupByArgs> = Prisma.PrismaPromise<
+  type GetOtpsGroupByPayload<T extends OtpsGroupByArgs> = Prisma.PrismaPromise<
     Array<
       PickEnumerable<OtpsGroupByOutputType, T['by']> &
         {
@@ -2264,37 +2264,37 @@ export namespace Prisma {
     >
 
 
-  export type otpsSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type OtpsSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     code?: boolean
     expiry?: boolean
     userId?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-    user?: boolean | usersDefaultArgs<ExtArgs>
+    user?: boolean | UsersDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["otps"]>
 
-  export type otpsSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type OtpsSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     code?: boolean
     expiry?: boolean
     userId?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-    user?: boolean | usersDefaultArgs<ExtArgs>
+    user?: boolean | UsersDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["otps"]>
 
-  export type otpsSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type OtpsSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     code?: boolean
     expiry?: boolean
     userId?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-    user?: boolean | usersDefaultArgs<ExtArgs>
+    user?: boolean | UsersDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["otps"]>
 
-  export type otpsSelectScalar = {
+  export type OtpsSelectScalar = {
     id?: boolean
     code?: boolean
     expiry?: boolean
@@ -2303,21 +2303,21 @@ export namespace Prisma {
     updatedAt?: boolean
   }
 
-  export type otpsOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "code" | "expiry" | "userId" | "createdAt" | "updatedAt", ExtArgs["result"]["otps"]>
-  export type otpsInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    user?: boolean | usersDefaultArgs<ExtArgs>
+  export type OtpsOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "code" | "expiry" | "userId" | "createdAt" | "updatedAt", ExtArgs["result"]["otps"]>
+  export type OtpsInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UsersDefaultArgs<ExtArgs>
   }
-  export type otpsIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    user?: boolean | usersDefaultArgs<ExtArgs>
+  export type OtpsIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UsersDefaultArgs<ExtArgs>
   }
-  export type otpsIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    user?: boolean | usersDefaultArgs<ExtArgs>
+  export type OtpsIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UsersDefaultArgs<ExtArgs>
   }
 
-  export type $otpsPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "otps"
+  export type $OtpsPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Otps"
     objects: {
-      user: Prisma.$usersPayload<ExtArgs>
+      user: Prisma.$UsersPayload<ExtArgs>
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -2330,18 +2330,18 @@ export namespace Prisma {
     composites: {}
   }
 
-  type otpsGetPayload<S extends boolean | null | undefined | otpsDefaultArgs> = $Result.GetResult<Prisma.$otpsPayload, S>
+  type OtpsGetPayload<S extends boolean | null | undefined | OtpsDefaultArgs> = $Result.GetResult<Prisma.$OtpsPayload, S>
 
-  type otpsCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<otpsFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+  type OtpsCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<OtpsFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
       select?: OtpsCountAggregateInputType | true
     }
 
-  export interface otpsDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['otps'], meta: { name: 'otps' } }
+  export interface OtpsDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Otps'], meta: { name: 'Otps' } }
     /**
      * Find zero or one Otps that matches the filter.
-     * @param {otpsFindUniqueArgs} args - Arguments to find a Otps
+     * @param {OtpsFindUniqueArgs} args - Arguments to find a Otps
      * @example
      * // Get one Otps
      * const otps = await prisma.otps.findUnique({
@@ -2350,12 +2350,12 @@ export namespace Prisma {
      *   }
      * })
      */
-    findUnique<T extends otpsFindUniqueArgs>(args: SelectSubset<T, otpsFindUniqueArgs<ExtArgs>>): Prisma__otpsClient<$Result.GetResult<Prisma.$otpsPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends OtpsFindUniqueArgs>(args: SelectSubset<T, OtpsFindUniqueArgs<ExtArgs>>): Prisma__OtpsClient<$Result.GetResult<Prisma.$OtpsPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find one Otps that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {otpsFindUniqueOrThrowArgs} args - Arguments to find a Otps
+     * @param {OtpsFindUniqueOrThrowArgs} args - Arguments to find a Otps
      * @example
      * // Get one Otps
      * const otps = await prisma.otps.findUniqueOrThrow({
@@ -2364,13 +2364,13 @@ export namespace Prisma {
      *   }
      * })
      */
-    findUniqueOrThrow<T extends otpsFindUniqueOrThrowArgs>(args: SelectSubset<T, otpsFindUniqueOrThrowArgs<ExtArgs>>): Prisma__otpsClient<$Result.GetResult<Prisma.$otpsPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends OtpsFindUniqueOrThrowArgs>(args: SelectSubset<T, OtpsFindUniqueOrThrowArgs<ExtArgs>>): Prisma__OtpsClient<$Result.GetResult<Prisma.$OtpsPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find the first Otps that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {otpsFindFirstArgs} args - Arguments to find a Otps
+     * @param {OtpsFindFirstArgs} args - Arguments to find a Otps
      * @example
      * // Get one Otps
      * const otps = await prisma.otps.findFirst({
@@ -2379,14 +2379,14 @@ export namespace Prisma {
      *   }
      * })
      */
-    findFirst<T extends otpsFindFirstArgs>(args?: SelectSubset<T, otpsFindFirstArgs<ExtArgs>>): Prisma__otpsClient<$Result.GetResult<Prisma.$otpsPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends OtpsFindFirstArgs>(args?: SelectSubset<T, OtpsFindFirstArgs<ExtArgs>>): Prisma__OtpsClient<$Result.GetResult<Prisma.$OtpsPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find the first Otps that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {otpsFindFirstOrThrowArgs} args - Arguments to find a Otps
+     * @param {OtpsFindFirstOrThrowArgs} args - Arguments to find a Otps
      * @example
      * // Get one Otps
      * const otps = await prisma.otps.findFirstOrThrow({
@@ -2395,13 +2395,13 @@ export namespace Prisma {
      *   }
      * })
      */
-    findFirstOrThrow<T extends otpsFindFirstOrThrowArgs>(args?: SelectSubset<T, otpsFindFirstOrThrowArgs<ExtArgs>>): Prisma__otpsClient<$Result.GetResult<Prisma.$otpsPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends OtpsFindFirstOrThrowArgs>(args?: SelectSubset<T, OtpsFindFirstOrThrowArgs<ExtArgs>>): Prisma__OtpsClient<$Result.GetResult<Prisma.$OtpsPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find zero or more Otps that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {otpsFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {OtpsFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
      * // Get all Otps
      * const otps = await prisma.otps.findMany()
@@ -2413,11 +2413,11 @@ export namespace Prisma {
      * const otpsWithIdOnly = await prisma.otps.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends otpsFindManyArgs>(args?: SelectSubset<T, otpsFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$otpsPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends OtpsFindManyArgs>(args?: SelectSubset<T, OtpsFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$OtpsPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
      * Create a Otps.
-     * @param {otpsCreateArgs} args - Arguments to create a Otps.
+     * @param {OtpsCreateArgs} args - Arguments to create a Otps.
      * @example
      * // Create one Otps
      * const Otps = await prisma.otps.create({
@@ -2427,11 +2427,11 @@ export namespace Prisma {
      * })
      * 
      */
-    create<T extends otpsCreateArgs>(args: SelectSubset<T, otpsCreateArgs<ExtArgs>>): Prisma__otpsClient<$Result.GetResult<Prisma.$otpsPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends OtpsCreateArgs>(args: SelectSubset<T, OtpsCreateArgs<ExtArgs>>): Prisma__OtpsClient<$Result.GetResult<Prisma.$OtpsPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Create many Otps.
-     * @param {otpsCreateManyArgs} args - Arguments to create many Otps.
+     * @param {OtpsCreateManyArgs} args - Arguments to create many Otps.
      * @example
      * // Create many Otps
      * const otps = await prisma.otps.createMany({
@@ -2441,11 +2441,11 @@ export namespace Prisma {
      * })
      *     
      */
-    createMany<T extends otpsCreateManyArgs>(args?: SelectSubset<T, otpsCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends OtpsCreateManyArgs>(args?: SelectSubset<T, OtpsCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Create many Otps and returns the data saved in the database.
-     * @param {otpsCreateManyAndReturnArgs} args - Arguments to create many Otps.
+     * @param {OtpsCreateManyAndReturnArgs} args - Arguments to create many Otps.
      * @example
      * // Create many Otps
      * const otps = await prisma.otps.createManyAndReturn({
@@ -2465,11 +2465,11 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends otpsCreateManyAndReturnArgs>(args?: SelectSubset<T, otpsCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$otpsPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends OtpsCreateManyAndReturnArgs>(args?: SelectSubset<T, OtpsCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$OtpsPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Delete a Otps.
-     * @param {otpsDeleteArgs} args - Arguments to delete one Otps.
+     * @param {OtpsDeleteArgs} args - Arguments to delete one Otps.
      * @example
      * // Delete one Otps
      * const Otps = await prisma.otps.delete({
@@ -2479,11 +2479,11 @@ export namespace Prisma {
      * })
      * 
      */
-    delete<T extends otpsDeleteArgs>(args: SelectSubset<T, otpsDeleteArgs<ExtArgs>>): Prisma__otpsClient<$Result.GetResult<Prisma.$otpsPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends OtpsDeleteArgs>(args: SelectSubset<T, OtpsDeleteArgs<ExtArgs>>): Prisma__OtpsClient<$Result.GetResult<Prisma.$OtpsPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Update one Otps.
-     * @param {otpsUpdateArgs} args - Arguments to update one Otps.
+     * @param {OtpsUpdateArgs} args - Arguments to update one Otps.
      * @example
      * // Update one Otps
      * const otps = await prisma.otps.update({
@@ -2496,11 +2496,11 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends otpsUpdateArgs>(args: SelectSubset<T, otpsUpdateArgs<ExtArgs>>): Prisma__otpsClient<$Result.GetResult<Prisma.$otpsPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends OtpsUpdateArgs>(args: SelectSubset<T, OtpsUpdateArgs<ExtArgs>>): Prisma__OtpsClient<$Result.GetResult<Prisma.$OtpsPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Delete zero or more Otps.
-     * @param {otpsDeleteManyArgs} args - Arguments to filter Otps to delete.
+     * @param {OtpsDeleteManyArgs} args - Arguments to filter Otps to delete.
      * @example
      * // Delete a few Otps
      * const { count } = await prisma.otps.deleteMany({
@@ -2510,13 +2510,13 @@ export namespace Prisma {
      * })
      * 
      */
-    deleteMany<T extends otpsDeleteManyArgs>(args?: SelectSubset<T, otpsDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends OtpsDeleteManyArgs>(args?: SelectSubset<T, OtpsDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Otps.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {otpsUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {OtpsUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
      * // Update many Otps
      * const otps = await prisma.otps.updateMany({
@@ -2529,11 +2529,11 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends otpsUpdateManyArgs>(args: SelectSubset<T, otpsUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends OtpsUpdateManyArgs>(args: SelectSubset<T, OtpsUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Otps and returns the data updated in the database.
-     * @param {otpsUpdateManyAndReturnArgs} args - Arguments to update many Otps.
+     * @param {OtpsUpdateManyAndReturnArgs} args - Arguments to update many Otps.
      * @example
      * // Update many Otps
      * const otps = await prisma.otps.updateManyAndReturn({
@@ -2559,11 +2559,11 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends otpsUpdateManyAndReturnArgs>(args: SelectSubset<T, otpsUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$otpsPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends OtpsUpdateManyAndReturnArgs>(args: SelectSubset<T, OtpsUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$OtpsPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Otps.
-     * @param {otpsUpsertArgs} args - Arguments to update or create a Otps.
+     * @param {OtpsUpsertArgs} args - Arguments to update or create a Otps.
      * @example
      * // Update or create a Otps
      * const otps = await prisma.otps.upsert({
@@ -2578,14 +2578,14 @@ export namespace Prisma {
      *   }
      * })
      */
-    upsert<T extends otpsUpsertArgs>(args: SelectSubset<T, otpsUpsertArgs<ExtArgs>>): Prisma__otpsClient<$Result.GetResult<Prisma.$otpsPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends OtpsUpsertArgs>(args: SelectSubset<T, OtpsUpsertArgs<ExtArgs>>): Prisma__OtpsClient<$Result.GetResult<Prisma.$OtpsPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
      * Count the number of Otps.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {otpsCountArgs} args - Arguments to filter Otps to count.
+     * @param {OtpsCountArgs} args - Arguments to filter Otps to count.
      * @example
      * // Count the number of Otps
      * const count = await prisma.otps.count({
@@ -2594,8 +2594,8 @@ export namespace Prisma {
      *   }
      * })
     **/
-    count<T extends otpsCountArgs>(
-      args?: Subset<T, otpsCountArgs>,
+    count<T extends OtpsCountArgs>(
+      args?: Subset<T, OtpsCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
@@ -2634,7 +2634,7 @@ export namespace Prisma {
      * Group by Otps.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {otpsGroupByArgs} args - Group by arguments.
+     * @param {OtpsGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -2649,14 +2649,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends otpsGroupByArgs,
+      T extends OtpsGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: otpsGroupByArgs['orderBy'] }
-        : { orderBy?: otpsGroupByArgs['orderBy'] },
+        ? { orderBy: OtpsGroupByArgs['orderBy'] }
+        : { orderBy?: OtpsGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -2705,22 +2705,22 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, otpsGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetOtpsGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, OtpsGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetOtpsGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the otps model
+   * Fields of the Otps model
    */
-  readonly fields: otpsFieldRefs;
+  readonly fields: OtpsFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for otps.
+   * The delegate class that acts as a "Promise-like" for Otps.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__otpsClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__OtpsClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    user<T extends usersDefaultArgs<ExtArgs> = {}>(args?: Subset<T, usersDefaultArgs<ExtArgs>>): Prisma__usersClient<$Result.GetResult<Prisma.$usersPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    user<T extends UsersDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UsersDefaultArgs<ExtArgs>>): Prisma__UsersClient<$Result.GetResult<Prisma.$UsersPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2747,426 +2747,426 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the otps model
+   * Fields of the Otps model
    */
-  interface otpsFieldRefs {
-    readonly id: FieldRef<"otps", 'String'>
-    readonly code: FieldRef<"otps", 'String'>
-    readonly expiry: FieldRef<"otps", 'DateTime'>
-    readonly userId: FieldRef<"otps", 'String'>
-    readonly createdAt: FieldRef<"otps", 'DateTime'>
-    readonly updatedAt: FieldRef<"otps", 'DateTime'>
+  interface OtpsFieldRefs {
+    readonly id: FieldRef<"Otps", 'String'>
+    readonly code: FieldRef<"Otps", 'String'>
+    readonly expiry: FieldRef<"Otps", 'DateTime'>
+    readonly userId: FieldRef<"Otps", 'String'>
+    readonly createdAt: FieldRef<"Otps", 'DateTime'>
+    readonly updatedAt: FieldRef<"Otps", 'DateTime'>
   }
     
 
   // Custom InputTypes
   /**
-   * otps findUnique
+   * Otps findUnique
    */
-  export type otpsFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type OtpsFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the otps
+     * Select specific fields to fetch from the Otps
      */
-    select?: otpsSelect<ExtArgs> | null
+    select?: OtpsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the otps
+     * Omit specific fields from the Otps
      */
-    omit?: otpsOmit<ExtArgs> | null
+    omit?: OtpsOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: otpsInclude<ExtArgs> | null
+    include?: OtpsInclude<ExtArgs> | null
     /**
-     * Filter, which otps to fetch.
+     * Filter, which Otps to fetch.
      */
-    where: otpsWhereUniqueInput
+    where: OtpsWhereUniqueInput
   }
 
   /**
-   * otps findUniqueOrThrow
+   * Otps findUniqueOrThrow
    */
-  export type otpsFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type OtpsFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the otps
+     * Select specific fields to fetch from the Otps
      */
-    select?: otpsSelect<ExtArgs> | null
+    select?: OtpsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the otps
+     * Omit specific fields from the Otps
      */
-    omit?: otpsOmit<ExtArgs> | null
+    omit?: OtpsOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: otpsInclude<ExtArgs> | null
+    include?: OtpsInclude<ExtArgs> | null
     /**
-     * Filter, which otps to fetch.
+     * Filter, which Otps to fetch.
      */
-    where: otpsWhereUniqueInput
+    where: OtpsWhereUniqueInput
   }
 
   /**
-   * otps findFirst
+   * Otps findFirst
    */
-  export type otpsFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type OtpsFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the otps
+     * Select specific fields to fetch from the Otps
      */
-    select?: otpsSelect<ExtArgs> | null
+    select?: OtpsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the otps
+     * Omit specific fields from the Otps
      */
-    omit?: otpsOmit<ExtArgs> | null
+    omit?: OtpsOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: otpsInclude<ExtArgs> | null
+    include?: OtpsInclude<ExtArgs> | null
     /**
-     * Filter, which otps to fetch.
+     * Filter, which Otps to fetch.
      */
-    where?: otpsWhereInput
+    where?: OtpsWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of otps to fetch.
+     * Determine the order of Otps to fetch.
      */
-    orderBy?: otpsOrderByWithRelationInput | otpsOrderByWithRelationInput[]
+    orderBy?: OtpsOrderByWithRelationInput | OtpsOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for otps.
+     * Sets the position for searching for Otps.
      */
-    cursor?: otpsWhereUniqueInput
+    cursor?: OtpsWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` otps from the position of the cursor.
+     * Take `±n` Otps from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` otps.
+     * Skip the first `n` Otps.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of otps.
+     * Filter by unique combinations of Otps.
      */
     distinct?: OtpsScalarFieldEnum | OtpsScalarFieldEnum[]
   }
 
   /**
-   * otps findFirstOrThrow
+   * Otps findFirstOrThrow
    */
-  export type otpsFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type OtpsFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the otps
+     * Select specific fields to fetch from the Otps
      */
-    select?: otpsSelect<ExtArgs> | null
+    select?: OtpsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the otps
+     * Omit specific fields from the Otps
      */
-    omit?: otpsOmit<ExtArgs> | null
+    omit?: OtpsOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: otpsInclude<ExtArgs> | null
+    include?: OtpsInclude<ExtArgs> | null
     /**
-     * Filter, which otps to fetch.
+     * Filter, which Otps to fetch.
      */
-    where?: otpsWhereInput
+    where?: OtpsWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of otps to fetch.
+     * Determine the order of Otps to fetch.
      */
-    orderBy?: otpsOrderByWithRelationInput | otpsOrderByWithRelationInput[]
+    orderBy?: OtpsOrderByWithRelationInput | OtpsOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for otps.
+     * Sets the position for searching for Otps.
      */
-    cursor?: otpsWhereUniqueInput
+    cursor?: OtpsWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` otps from the position of the cursor.
+     * Take `±n` Otps from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` otps.
+     * Skip the first `n` Otps.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of otps.
+     * Filter by unique combinations of Otps.
      */
     distinct?: OtpsScalarFieldEnum | OtpsScalarFieldEnum[]
   }
 
   /**
-   * otps findMany
+   * Otps findMany
    */
-  export type otpsFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type OtpsFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the otps
+     * Select specific fields to fetch from the Otps
      */
-    select?: otpsSelect<ExtArgs> | null
+    select?: OtpsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the otps
+     * Omit specific fields from the Otps
      */
-    omit?: otpsOmit<ExtArgs> | null
+    omit?: OtpsOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: otpsInclude<ExtArgs> | null
+    include?: OtpsInclude<ExtArgs> | null
     /**
-     * Filter, which otps to fetch.
+     * Filter, which Otps to fetch.
      */
-    where?: otpsWhereInput
+    where?: OtpsWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of otps to fetch.
+     * Determine the order of Otps to fetch.
      */
-    orderBy?: otpsOrderByWithRelationInput | otpsOrderByWithRelationInput[]
+    orderBy?: OtpsOrderByWithRelationInput | OtpsOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing otps.
+     * Sets the position for listing Otps.
      */
-    cursor?: otpsWhereUniqueInput
+    cursor?: OtpsWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` otps from the position of the cursor.
+     * Take `±n` Otps from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` otps.
+     * Skip the first `n` Otps.
      */
     skip?: number
     distinct?: OtpsScalarFieldEnum | OtpsScalarFieldEnum[]
   }
 
   /**
-   * otps create
+   * Otps create
    */
-  export type otpsCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type OtpsCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the otps
+     * Select specific fields to fetch from the Otps
      */
-    select?: otpsSelect<ExtArgs> | null
+    select?: OtpsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the otps
+     * Omit specific fields from the Otps
      */
-    omit?: otpsOmit<ExtArgs> | null
+    omit?: OtpsOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: otpsInclude<ExtArgs> | null
+    include?: OtpsInclude<ExtArgs> | null
     /**
-     * The data needed to create a otps.
+     * The data needed to create a Otps.
      */
-    data: XOR<otpsCreateInput, otpsUncheckedCreateInput>
+    data: XOR<OtpsCreateInput, OtpsUncheckedCreateInput>
   }
 
   /**
-   * otps createMany
+   * Otps createMany
    */
-  export type otpsCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type OtpsCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many otps.
+     * The data used to create many Otps.
      */
-    data: otpsCreateManyInput | otpsCreateManyInput[]
+    data: OtpsCreateManyInput | OtpsCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * otps createManyAndReturn
+   * Otps createManyAndReturn
    */
-  export type otpsCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type OtpsCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the otps
+     * Select specific fields to fetch from the Otps
      */
-    select?: otpsSelectCreateManyAndReturn<ExtArgs> | null
+    select?: OtpsSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the otps
+     * Omit specific fields from the Otps
      */
-    omit?: otpsOmit<ExtArgs> | null
+    omit?: OtpsOmit<ExtArgs> | null
     /**
-     * The data used to create many otps.
+     * The data used to create many Otps.
      */
-    data: otpsCreateManyInput | otpsCreateManyInput[]
+    data: OtpsCreateManyInput | OtpsCreateManyInput[]
     skipDuplicates?: boolean
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: otpsIncludeCreateManyAndReturn<ExtArgs> | null
+    include?: OtpsIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * otps update
+   * Otps update
    */
-  export type otpsUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type OtpsUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the otps
+     * Select specific fields to fetch from the Otps
      */
-    select?: otpsSelect<ExtArgs> | null
+    select?: OtpsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the otps
+     * Omit specific fields from the Otps
      */
-    omit?: otpsOmit<ExtArgs> | null
+    omit?: OtpsOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: otpsInclude<ExtArgs> | null
+    include?: OtpsInclude<ExtArgs> | null
     /**
-     * The data needed to update a otps.
+     * The data needed to update a Otps.
      */
-    data: XOR<otpsUpdateInput, otpsUncheckedUpdateInput>
+    data: XOR<OtpsUpdateInput, OtpsUncheckedUpdateInput>
     /**
-     * Choose, which otps to update.
+     * Choose, which Otps to update.
      */
-    where: otpsWhereUniqueInput
+    where: OtpsWhereUniqueInput
   }
 
   /**
-   * otps updateMany
+   * Otps updateMany
    */
-  export type otpsUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type OtpsUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update otps.
+     * The data used to update Otps.
      */
-    data: XOR<otpsUpdateManyMutationInput, otpsUncheckedUpdateManyInput>
+    data: XOR<OtpsUpdateManyMutationInput, OtpsUncheckedUpdateManyInput>
     /**
-     * Filter which otps to update
+     * Filter which Otps to update
      */
-    where?: otpsWhereInput
+    where?: OtpsWhereInput
     /**
-     * Limit how many otps to update.
+     * Limit how many Otps to update.
      */
     limit?: number
   }
 
   /**
-   * otps updateManyAndReturn
+   * Otps updateManyAndReturn
    */
-  export type otpsUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type OtpsUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the otps
+     * Select specific fields to fetch from the Otps
      */
-    select?: otpsSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: OtpsSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the otps
+     * Omit specific fields from the Otps
      */
-    omit?: otpsOmit<ExtArgs> | null
+    omit?: OtpsOmit<ExtArgs> | null
     /**
-     * The data used to update otps.
+     * The data used to update Otps.
      */
-    data: XOR<otpsUpdateManyMutationInput, otpsUncheckedUpdateManyInput>
+    data: XOR<OtpsUpdateManyMutationInput, OtpsUncheckedUpdateManyInput>
     /**
-     * Filter which otps to update
+     * Filter which Otps to update
      */
-    where?: otpsWhereInput
+    where?: OtpsWhereInput
     /**
-     * Limit how many otps to update.
+     * Limit how many Otps to update.
      */
     limit?: number
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: otpsIncludeUpdateManyAndReturn<ExtArgs> | null
+    include?: OtpsIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * otps upsert
+   * Otps upsert
    */
-  export type otpsUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type OtpsUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the otps
+     * Select specific fields to fetch from the Otps
      */
-    select?: otpsSelect<ExtArgs> | null
+    select?: OtpsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the otps
+     * Omit specific fields from the Otps
      */
-    omit?: otpsOmit<ExtArgs> | null
+    omit?: OtpsOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: otpsInclude<ExtArgs> | null
+    include?: OtpsInclude<ExtArgs> | null
     /**
-     * The filter to search for the otps to update in case it exists.
+     * The filter to search for the Otps to update in case it exists.
      */
-    where: otpsWhereUniqueInput
+    where: OtpsWhereUniqueInput
     /**
-     * In case the otps found by the `where` argument doesn't exist, create a new otps with this data.
+     * In case the Otps found by the `where` argument doesn't exist, create a new Otps with this data.
      */
-    create: XOR<otpsCreateInput, otpsUncheckedCreateInput>
+    create: XOR<OtpsCreateInput, OtpsUncheckedCreateInput>
     /**
-     * In case the otps was found with the provided `where` argument, update it with this data.
+     * In case the Otps was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<otpsUpdateInput, otpsUncheckedUpdateInput>
+    update: XOR<OtpsUpdateInput, OtpsUncheckedUpdateInput>
   }
 
   /**
-   * otps delete
+   * Otps delete
    */
-  export type otpsDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type OtpsDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the otps
+     * Select specific fields to fetch from the Otps
      */
-    select?: otpsSelect<ExtArgs> | null
+    select?: OtpsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the otps
+     * Omit specific fields from the Otps
      */
-    omit?: otpsOmit<ExtArgs> | null
+    omit?: OtpsOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: otpsInclude<ExtArgs> | null
+    include?: OtpsInclude<ExtArgs> | null
     /**
-     * Filter which otps to delete.
+     * Filter which Otps to delete.
      */
-    where: otpsWhereUniqueInput
+    where: OtpsWhereUniqueInput
   }
 
   /**
-   * otps deleteMany
+   * Otps deleteMany
    */
-  export type otpsDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type OtpsDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which otps to delete
+     * Filter which Otps to delete
      */
-    where?: otpsWhereInput
+    where?: OtpsWhereInput
     /**
-     * Limit how many otps to delete.
+     * Limit how many Otps to delete.
      */
     limit?: number
   }
 
   /**
-   * otps without action
+   * Otps without action
    */
-  export type otpsDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type OtpsDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the otps
+     * Select specific fields to fetch from the Otps
      */
-    select?: otpsSelect<ExtArgs> | null
+    select?: OtpsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the otps
+     * Omit specific fields from the Otps
      */
-    omit?: otpsOmit<ExtArgs> | null
+    omit?: OtpsOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: otpsInclude<ExtArgs> | null
+    include?: OtpsInclude<ExtArgs> | null
   }
 
 
@@ -3283,21 +3283,21 @@ export namespace Prisma {
    */
 
 
-  export type usersWhereInput = {
-    AND?: usersWhereInput | usersWhereInput[]
-    OR?: usersWhereInput[]
-    NOT?: usersWhereInput | usersWhereInput[]
-    id?: StringFilter<"users"> | string
-    name?: StringFilter<"users"> | string
-    email?: StringFilter<"users"> | string
-    password?: StringFilter<"users"> | string
-    verifiedAt?: DateTimeNullableFilter<"users"> | Date | string | null
-    createdAt?: DateTimeFilter<"users"> | Date | string
-    updatedAt?: DateTimeFilter<"users"> | Date | string
+  export type UsersWhereInput = {
+    AND?: UsersWhereInput | UsersWhereInput[]
+    OR?: UsersWhereInput[]
+    NOT?: UsersWhereInput | UsersWhereInput[]
+    id?: StringFilter<"Users"> | string
+    name?: StringFilter<"Users"> | string
+    email?: StringFilter<"Users"> | string
+    password?: StringFilter<"Users"> | string
+    verifiedAt?: DateTimeNullableFilter<"Users"> | Date | string | null
+    createdAt?: DateTimeFilter<"Users"> | Date | string
+    updatedAt?: DateTimeFilter<"Users"> | Date | string
     otps?: OtpsListRelationFilter
   }
 
-  export type usersOrderByWithRelationInput = {
+  export type UsersOrderByWithRelationInput = {
     id?: SortOrder
     name?: SortOrder
     email?: SortOrder
@@ -3305,24 +3305,24 @@ export namespace Prisma {
     verifiedAt?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
-    otps?: otpsOrderByRelationAggregateInput
+    otps?: OtpsOrderByRelationAggregateInput
   }
 
-  export type usersWhereUniqueInput = Prisma.AtLeast<{
+  export type UsersWhereUniqueInput = Prisma.AtLeast<{
     id?: string
     email?: string
-    AND?: usersWhereInput | usersWhereInput[]
-    OR?: usersWhereInput[]
-    NOT?: usersWhereInput | usersWhereInput[]
-    name?: StringFilter<"users"> | string
-    password?: StringFilter<"users"> | string
-    verifiedAt?: DateTimeNullableFilter<"users"> | Date | string | null
-    createdAt?: DateTimeFilter<"users"> | Date | string
-    updatedAt?: DateTimeFilter<"users"> | Date | string
+    AND?: UsersWhereInput | UsersWhereInput[]
+    OR?: UsersWhereInput[]
+    NOT?: UsersWhereInput | UsersWhereInput[]
+    name?: StringFilter<"Users"> | string
+    password?: StringFilter<"Users"> | string
+    verifiedAt?: DateTimeNullableFilter<"Users"> | Date | string | null
+    createdAt?: DateTimeFilter<"Users"> | Date | string
+    updatedAt?: DateTimeFilter<"Users"> | Date | string
     otps?: OtpsListRelationFilter
   }, "id" | "email">
 
-  export type usersOrderByWithAggregationInput = {
+  export type UsersOrderByWithAggregationInput = {
     id?: SortOrder
     name?: SortOrder
     email?: SortOrder
@@ -3330,85 +3330,85 @@ export namespace Prisma {
     verifiedAt?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
-    _count?: usersCountOrderByAggregateInput
-    _max?: usersMaxOrderByAggregateInput
-    _min?: usersMinOrderByAggregateInput
+    _count?: UsersCountOrderByAggregateInput
+    _max?: UsersMaxOrderByAggregateInput
+    _min?: UsersMinOrderByAggregateInput
   }
 
-  export type usersScalarWhereWithAggregatesInput = {
-    AND?: usersScalarWhereWithAggregatesInput | usersScalarWhereWithAggregatesInput[]
-    OR?: usersScalarWhereWithAggregatesInput[]
-    NOT?: usersScalarWhereWithAggregatesInput | usersScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"users"> | string
-    name?: StringWithAggregatesFilter<"users"> | string
-    email?: StringWithAggregatesFilter<"users"> | string
-    password?: StringWithAggregatesFilter<"users"> | string
-    verifiedAt?: DateTimeNullableWithAggregatesFilter<"users"> | Date | string | null
-    createdAt?: DateTimeWithAggregatesFilter<"users"> | Date | string
-    updatedAt?: DateTimeWithAggregatesFilter<"users"> | Date | string
+  export type UsersScalarWhereWithAggregatesInput = {
+    AND?: UsersScalarWhereWithAggregatesInput | UsersScalarWhereWithAggregatesInput[]
+    OR?: UsersScalarWhereWithAggregatesInput[]
+    NOT?: UsersScalarWhereWithAggregatesInput | UsersScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"Users"> | string
+    name?: StringWithAggregatesFilter<"Users"> | string
+    email?: StringWithAggregatesFilter<"Users"> | string
+    password?: StringWithAggregatesFilter<"Users"> | string
+    verifiedAt?: DateTimeNullableWithAggregatesFilter<"Users"> | Date | string | null
+    createdAt?: DateTimeWithAggregatesFilter<"Users"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"Users"> | Date | string
   }
 
-  export type otpsWhereInput = {
-    AND?: otpsWhereInput | otpsWhereInput[]
-    OR?: otpsWhereInput[]
-    NOT?: otpsWhereInput | otpsWhereInput[]
-    id?: StringFilter<"otps"> | string
-    code?: StringFilter<"otps"> | string
-    expiry?: DateTimeFilter<"otps"> | Date | string
-    userId?: StringFilter<"otps"> | string
-    createdAt?: DateTimeFilter<"otps"> | Date | string
-    updatedAt?: DateTimeFilter<"otps"> | Date | string
-    user?: XOR<UsersScalarRelationFilter, usersWhereInput>
+  export type OtpsWhereInput = {
+    AND?: OtpsWhereInput | OtpsWhereInput[]
+    OR?: OtpsWhereInput[]
+    NOT?: OtpsWhereInput | OtpsWhereInput[]
+    id?: StringFilter<"Otps"> | string
+    code?: StringFilter<"Otps"> | string
+    expiry?: DateTimeFilter<"Otps"> | Date | string
+    userId?: StringFilter<"Otps"> | string
+    createdAt?: DateTimeFilter<"Otps"> | Date | string
+    updatedAt?: DateTimeFilter<"Otps"> | Date | string
+    user?: XOR<UsersScalarRelationFilter, UsersWhereInput>
   }
 
-  export type otpsOrderByWithRelationInput = {
+  export type OtpsOrderByWithRelationInput = {
     id?: SortOrder
     code?: SortOrder
     expiry?: SortOrder
     userId?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
-    user?: usersOrderByWithRelationInput
+    user?: UsersOrderByWithRelationInput
   }
 
-  export type otpsWhereUniqueInput = Prisma.AtLeast<{
+  export type OtpsWhereUniqueInput = Prisma.AtLeast<{
     id?: string
-    AND?: otpsWhereInput | otpsWhereInput[]
-    OR?: otpsWhereInput[]
-    NOT?: otpsWhereInput | otpsWhereInput[]
-    code?: StringFilter<"otps"> | string
-    expiry?: DateTimeFilter<"otps"> | Date | string
-    userId?: StringFilter<"otps"> | string
-    createdAt?: DateTimeFilter<"otps"> | Date | string
-    updatedAt?: DateTimeFilter<"otps"> | Date | string
-    user?: XOR<UsersScalarRelationFilter, usersWhereInput>
+    AND?: OtpsWhereInput | OtpsWhereInput[]
+    OR?: OtpsWhereInput[]
+    NOT?: OtpsWhereInput | OtpsWhereInput[]
+    code?: StringFilter<"Otps"> | string
+    expiry?: DateTimeFilter<"Otps"> | Date | string
+    userId?: StringFilter<"Otps"> | string
+    createdAt?: DateTimeFilter<"Otps"> | Date | string
+    updatedAt?: DateTimeFilter<"Otps"> | Date | string
+    user?: XOR<UsersScalarRelationFilter, UsersWhereInput>
   }, "id">
 
-  export type otpsOrderByWithAggregationInput = {
+  export type OtpsOrderByWithAggregationInput = {
     id?: SortOrder
     code?: SortOrder
     expiry?: SortOrder
     userId?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
-    _count?: otpsCountOrderByAggregateInput
-    _max?: otpsMaxOrderByAggregateInput
-    _min?: otpsMinOrderByAggregateInput
+    _count?: OtpsCountOrderByAggregateInput
+    _max?: OtpsMaxOrderByAggregateInput
+    _min?: OtpsMinOrderByAggregateInput
   }
 
-  export type otpsScalarWhereWithAggregatesInput = {
-    AND?: otpsScalarWhereWithAggregatesInput | otpsScalarWhereWithAggregatesInput[]
-    OR?: otpsScalarWhereWithAggregatesInput[]
-    NOT?: otpsScalarWhereWithAggregatesInput | otpsScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"otps"> | string
-    code?: StringWithAggregatesFilter<"otps"> | string
-    expiry?: DateTimeWithAggregatesFilter<"otps"> | Date | string
-    userId?: StringWithAggregatesFilter<"otps"> | string
-    createdAt?: DateTimeWithAggregatesFilter<"otps"> | Date | string
-    updatedAt?: DateTimeWithAggregatesFilter<"otps"> | Date | string
+  export type OtpsScalarWhereWithAggregatesInput = {
+    AND?: OtpsScalarWhereWithAggregatesInput | OtpsScalarWhereWithAggregatesInput[]
+    OR?: OtpsScalarWhereWithAggregatesInput[]
+    NOT?: OtpsScalarWhereWithAggregatesInput | OtpsScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"Otps"> | string
+    code?: StringWithAggregatesFilter<"Otps"> | string
+    expiry?: DateTimeWithAggregatesFilter<"Otps"> | Date | string
+    userId?: StringWithAggregatesFilter<"Otps"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"Otps"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"Otps"> | Date | string
   }
 
-  export type usersCreateInput = {
+  export type UsersCreateInput = {
     id?: string
     name: string
     email: string
@@ -3416,10 +3416,10 @@ export namespace Prisma {
     verifiedAt?: Date | string | null
     createdAt?: Date | string
     updatedAt?: Date | string
-    otps?: otpsCreateNestedManyWithoutUserInput
+    otps?: OtpsCreateNestedManyWithoutUserInput
   }
 
-  export type usersUncheckedCreateInput = {
+  export type UsersUncheckedCreateInput = {
     id?: string
     name: string
     email: string
@@ -3427,10 +3427,10 @@ export namespace Prisma {
     verifiedAt?: Date | string | null
     createdAt?: Date | string
     updatedAt?: Date | string
-    otps?: otpsUncheckedCreateNestedManyWithoutUserInput
+    otps?: OtpsUncheckedCreateNestedManyWithoutUserInput
   }
 
-  export type usersUpdateInput = {
+  export type UsersUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
@@ -3438,10 +3438,10 @@ export namespace Prisma {
     verifiedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    otps?: otpsUpdateManyWithoutUserNestedInput
+    otps?: OtpsUpdateManyWithoutUserNestedInput
   }
 
-  export type usersUncheckedUpdateInput = {
+  export type UsersUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
@@ -3449,10 +3449,10 @@ export namespace Prisma {
     verifiedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    otps?: otpsUncheckedUpdateManyWithoutUserNestedInput
+    otps?: OtpsUncheckedUpdateManyWithoutUserNestedInput
   }
 
-  export type usersCreateManyInput = {
+  export type UsersCreateManyInput = {
     id?: string
     name: string
     email: string
@@ -3462,7 +3462,7 @@ export namespace Prisma {
     updatedAt?: Date | string
   }
 
-  export type usersUpdateManyMutationInput = {
+  export type UsersUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
@@ -3472,7 +3472,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type usersUncheckedUpdateManyInput = {
+  export type UsersUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
@@ -3482,16 +3482,16 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type otpsCreateInput = {
+  export type OtpsCreateInput = {
     id?: string
     code: string
     expiry: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
-    user: usersCreateNestedOneWithoutOtpsInput
+    user: UsersCreateNestedOneWithoutOtpsInput
   }
 
-  export type otpsUncheckedCreateInput = {
+  export type OtpsUncheckedCreateInput = {
     id?: string
     code: string
     expiry: Date | string
@@ -3500,16 +3500,16 @@ export namespace Prisma {
     updatedAt?: Date | string
   }
 
-  export type otpsUpdateInput = {
+  export type OtpsUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     code?: StringFieldUpdateOperationsInput | string
     expiry?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    user?: usersUpdateOneRequiredWithoutOtpsNestedInput
+    user?: UsersUpdateOneRequiredWithoutOtpsNestedInput
   }
 
-  export type otpsUncheckedUpdateInput = {
+  export type OtpsUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     code?: StringFieldUpdateOperationsInput | string
     expiry?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -3518,7 +3518,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type otpsCreateManyInput = {
+  export type OtpsCreateManyInput = {
     id?: string
     code: string
     expiry: Date | string
@@ -3527,7 +3527,7 @@ export namespace Prisma {
     updatedAt?: Date | string
   }
 
-  export type otpsUpdateManyMutationInput = {
+  export type OtpsUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     code?: StringFieldUpdateOperationsInput | string
     expiry?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -3535,7 +3535,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type otpsUncheckedUpdateManyInput = {
+  export type OtpsUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     code?: StringFieldUpdateOperationsInput | string
     expiry?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -3582,9 +3582,9 @@ export namespace Prisma {
   }
 
   export type OtpsListRelationFilter = {
-    every?: otpsWhereInput
-    some?: otpsWhereInput
-    none?: otpsWhereInput
+    every?: OtpsWhereInput
+    some?: OtpsWhereInput
+    none?: OtpsWhereInput
   }
 
   export type SortOrderInput = {
@@ -3592,11 +3592,11 @@ export namespace Prisma {
     nulls?: NullsOrder
   }
 
-  export type otpsOrderByRelationAggregateInput = {
+  export type OtpsOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
-  export type usersCountOrderByAggregateInput = {
+  export type UsersCountOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
     email?: SortOrder
@@ -3606,7 +3606,7 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
-  export type usersMaxOrderByAggregateInput = {
+  export type UsersMaxOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
     email?: SortOrder
@@ -3616,7 +3616,7 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
-  export type usersMinOrderByAggregateInput = {
+  export type UsersMinOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
     email?: SortOrder
@@ -3673,11 +3673,11 @@ export namespace Prisma {
   }
 
   export type UsersScalarRelationFilter = {
-    is?: usersWhereInput
-    isNot?: usersWhereInput
+    is?: UsersWhereInput
+    isNot?: UsersWhereInput
   }
 
-  export type otpsCountOrderByAggregateInput = {
+  export type OtpsCountOrderByAggregateInput = {
     id?: SortOrder
     code?: SortOrder
     expiry?: SortOrder
@@ -3686,7 +3686,7 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
-  export type otpsMaxOrderByAggregateInput = {
+  export type OtpsMaxOrderByAggregateInput = {
     id?: SortOrder
     code?: SortOrder
     expiry?: SortOrder
@@ -3695,7 +3695,7 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
-  export type otpsMinOrderByAggregateInput = {
+  export type OtpsMinOrderByAggregateInput = {
     id?: SortOrder
     code?: SortOrder
     expiry?: SortOrder
@@ -3704,18 +3704,18 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
-  export type otpsCreateNestedManyWithoutUserInput = {
-    create?: XOR<otpsCreateWithoutUserInput, otpsUncheckedCreateWithoutUserInput> | otpsCreateWithoutUserInput[] | otpsUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: otpsCreateOrConnectWithoutUserInput | otpsCreateOrConnectWithoutUserInput[]
-    createMany?: otpsCreateManyUserInputEnvelope
-    connect?: otpsWhereUniqueInput | otpsWhereUniqueInput[]
+  export type OtpsCreateNestedManyWithoutUserInput = {
+    create?: XOR<OtpsCreateWithoutUserInput, OtpsUncheckedCreateWithoutUserInput> | OtpsCreateWithoutUserInput[] | OtpsUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: OtpsCreateOrConnectWithoutUserInput | OtpsCreateOrConnectWithoutUserInput[]
+    createMany?: OtpsCreateManyUserInputEnvelope
+    connect?: OtpsWhereUniqueInput | OtpsWhereUniqueInput[]
   }
 
-  export type otpsUncheckedCreateNestedManyWithoutUserInput = {
-    create?: XOR<otpsCreateWithoutUserInput, otpsUncheckedCreateWithoutUserInput> | otpsCreateWithoutUserInput[] | otpsUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: otpsCreateOrConnectWithoutUserInput | otpsCreateOrConnectWithoutUserInput[]
-    createMany?: otpsCreateManyUserInputEnvelope
-    connect?: otpsWhereUniqueInput | otpsWhereUniqueInput[]
+  export type OtpsUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<OtpsCreateWithoutUserInput, OtpsUncheckedCreateWithoutUserInput> | OtpsCreateWithoutUserInput[] | OtpsUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: OtpsCreateOrConnectWithoutUserInput | OtpsCreateOrConnectWithoutUserInput[]
+    createMany?: OtpsCreateManyUserInputEnvelope
+    connect?: OtpsWhereUniqueInput | OtpsWhereUniqueInput[]
   }
 
   export type StringFieldUpdateOperationsInput = {
@@ -3730,46 +3730,46 @@ export namespace Prisma {
     set?: Date | string
   }
 
-  export type otpsUpdateManyWithoutUserNestedInput = {
-    create?: XOR<otpsCreateWithoutUserInput, otpsUncheckedCreateWithoutUserInput> | otpsCreateWithoutUserInput[] | otpsUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: otpsCreateOrConnectWithoutUserInput | otpsCreateOrConnectWithoutUserInput[]
-    upsert?: otpsUpsertWithWhereUniqueWithoutUserInput | otpsUpsertWithWhereUniqueWithoutUserInput[]
-    createMany?: otpsCreateManyUserInputEnvelope
-    set?: otpsWhereUniqueInput | otpsWhereUniqueInput[]
-    disconnect?: otpsWhereUniqueInput | otpsWhereUniqueInput[]
-    delete?: otpsWhereUniqueInput | otpsWhereUniqueInput[]
-    connect?: otpsWhereUniqueInput | otpsWhereUniqueInput[]
-    update?: otpsUpdateWithWhereUniqueWithoutUserInput | otpsUpdateWithWhereUniqueWithoutUserInput[]
-    updateMany?: otpsUpdateManyWithWhereWithoutUserInput | otpsUpdateManyWithWhereWithoutUserInput[]
-    deleteMany?: otpsScalarWhereInput | otpsScalarWhereInput[]
+  export type OtpsUpdateManyWithoutUserNestedInput = {
+    create?: XOR<OtpsCreateWithoutUserInput, OtpsUncheckedCreateWithoutUserInput> | OtpsCreateWithoutUserInput[] | OtpsUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: OtpsCreateOrConnectWithoutUserInput | OtpsCreateOrConnectWithoutUserInput[]
+    upsert?: OtpsUpsertWithWhereUniqueWithoutUserInput | OtpsUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: OtpsCreateManyUserInputEnvelope
+    set?: OtpsWhereUniqueInput | OtpsWhereUniqueInput[]
+    disconnect?: OtpsWhereUniqueInput | OtpsWhereUniqueInput[]
+    delete?: OtpsWhereUniqueInput | OtpsWhereUniqueInput[]
+    connect?: OtpsWhereUniqueInput | OtpsWhereUniqueInput[]
+    update?: OtpsUpdateWithWhereUniqueWithoutUserInput | OtpsUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: OtpsUpdateManyWithWhereWithoutUserInput | OtpsUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: OtpsScalarWhereInput | OtpsScalarWhereInput[]
   }
 
-  export type otpsUncheckedUpdateManyWithoutUserNestedInput = {
-    create?: XOR<otpsCreateWithoutUserInput, otpsUncheckedCreateWithoutUserInput> | otpsCreateWithoutUserInput[] | otpsUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: otpsCreateOrConnectWithoutUserInput | otpsCreateOrConnectWithoutUserInput[]
-    upsert?: otpsUpsertWithWhereUniqueWithoutUserInput | otpsUpsertWithWhereUniqueWithoutUserInput[]
-    createMany?: otpsCreateManyUserInputEnvelope
-    set?: otpsWhereUniqueInput | otpsWhereUniqueInput[]
-    disconnect?: otpsWhereUniqueInput | otpsWhereUniqueInput[]
-    delete?: otpsWhereUniqueInput | otpsWhereUniqueInput[]
-    connect?: otpsWhereUniqueInput | otpsWhereUniqueInput[]
-    update?: otpsUpdateWithWhereUniqueWithoutUserInput | otpsUpdateWithWhereUniqueWithoutUserInput[]
-    updateMany?: otpsUpdateManyWithWhereWithoutUserInput | otpsUpdateManyWithWhereWithoutUserInput[]
-    deleteMany?: otpsScalarWhereInput | otpsScalarWhereInput[]
+  export type OtpsUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<OtpsCreateWithoutUserInput, OtpsUncheckedCreateWithoutUserInput> | OtpsCreateWithoutUserInput[] | OtpsUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: OtpsCreateOrConnectWithoutUserInput | OtpsCreateOrConnectWithoutUserInput[]
+    upsert?: OtpsUpsertWithWhereUniqueWithoutUserInput | OtpsUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: OtpsCreateManyUserInputEnvelope
+    set?: OtpsWhereUniqueInput | OtpsWhereUniqueInput[]
+    disconnect?: OtpsWhereUniqueInput | OtpsWhereUniqueInput[]
+    delete?: OtpsWhereUniqueInput | OtpsWhereUniqueInput[]
+    connect?: OtpsWhereUniqueInput | OtpsWhereUniqueInput[]
+    update?: OtpsUpdateWithWhereUniqueWithoutUserInput | OtpsUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: OtpsUpdateManyWithWhereWithoutUserInput | OtpsUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: OtpsScalarWhereInput | OtpsScalarWhereInput[]
   }
 
-  export type usersCreateNestedOneWithoutOtpsInput = {
-    create?: XOR<usersCreateWithoutOtpsInput, usersUncheckedCreateWithoutOtpsInput>
-    connectOrCreate?: usersCreateOrConnectWithoutOtpsInput
-    connect?: usersWhereUniqueInput
+  export type UsersCreateNestedOneWithoutOtpsInput = {
+    create?: XOR<UsersCreateWithoutOtpsInput, UsersUncheckedCreateWithoutOtpsInput>
+    connectOrCreate?: UsersCreateOrConnectWithoutOtpsInput
+    connect?: UsersWhereUniqueInput
   }
 
-  export type usersUpdateOneRequiredWithoutOtpsNestedInput = {
-    create?: XOR<usersCreateWithoutOtpsInput, usersUncheckedCreateWithoutOtpsInput>
-    connectOrCreate?: usersCreateOrConnectWithoutOtpsInput
-    upsert?: usersUpsertWithoutOtpsInput
-    connect?: usersWhereUniqueInput
-    update?: XOR<XOR<usersUpdateToOneWithWhereWithoutOtpsInput, usersUpdateWithoutOtpsInput>, usersUncheckedUpdateWithoutOtpsInput>
+  export type UsersUpdateOneRequiredWithoutOtpsNestedInput = {
+    create?: XOR<UsersCreateWithoutOtpsInput, UsersUncheckedCreateWithoutOtpsInput>
+    connectOrCreate?: UsersCreateOrConnectWithoutOtpsInput
+    upsert?: UsersUpsertWithoutOtpsInput
+    connect?: UsersWhereUniqueInput
+    update?: XOR<XOR<UsersUpdateToOneWithWhereWithoutOtpsInput, UsersUpdateWithoutOtpsInput>, UsersUncheckedUpdateWithoutOtpsInput>
   }
 
   export type NestedStringFilter<$PrismaModel = never> = {
@@ -3875,7 +3875,7 @@ export namespace Prisma {
     _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
-  export type otpsCreateWithoutUserInput = {
+  export type OtpsCreateWithoutUserInput = {
     id?: string
     code: string
     expiry: Date | string
@@ -3883,7 +3883,7 @@ export namespace Prisma {
     updatedAt?: Date | string
   }
 
-  export type otpsUncheckedCreateWithoutUserInput = {
+  export type OtpsUncheckedCreateWithoutUserInput = {
     id?: string
     code: string
     expiry: Date | string
@@ -3891,45 +3891,45 @@ export namespace Prisma {
     updatedAt?: Date | string
   }
 
-  export type otpsCreateOrConnectWithoutUserInput = {
-    where: otpsWhereUniqueInput
-    create: XOR<otpsCreateWithoutUserInput, otpsUncheckedCreateWithoutUserInput>
+  export type OtpsCreateOrConnectWithoutUserInput = {
+    where: OtpsWhereUniqueInput
+    create: XOR<OtpsCreateWithoutUserInput, OtpsUncheckedCreateWithoutUserInput>
   }
 
-  export type otpsCreateManyUserInputEnvelope = {
-    data: otpsCreateManyUserInput | otpsCreateManyUserInput[]
+  export type OtpsCreateManyUserInputEnvelope = {
+    data: OtpsCreateManyUserInput | OtpsCreateManyUserInput[]
     skipDuplicates?: boolean
   }
 
-  export type otpsUpsertWithWhereUniqueWithoutUserInput = {
-    where: otpsWhereUniqueInput
-    update: XOR<otpsUpdateWithoutUserInput, otpsUncheckedUpdateWithoutUserInput>
-    create: XOR<otpsCreateWithoutUserInput, otpsUncheckedCreateWithoutUserInput>
+  export type OtpsUpsertWithWhereUniqueWithoutUserInput = {
+    where: OtpsWhereUniqueInput
+    update: XOR<OtpsUpdateWithoutUserInput, OtpsUncheckedUpdateWithoutUserInput>
+    create: XOR<OtpsCreateWithoutUserInput, OtpsUncheckedCreateWithoutUserInput>
   }
 
-  export type otpsUpdateWithWhereUniqueWithoutUserInput = {
-    where: otpsWhereUniqueInput
-    data: XOR<otpsUpdateWithoutUserInput, otpsUncheckedUpdateWithoutUserInput>
+  export type OtpsUpdateWithWhereUniqueWithoutUserInput = {
+    where: OtpsWhereUniqueInput
+    data: XOR<OtpsUpdateWithoutUserInput, OtpsUncheckedUpdateWithoutUserInput>
   }
 
-  export type otpsUpdateManyWithWhereWithoutUserInput = {
-    where: otpsScalarWhereInput
-    data: XOR<otpsUpdateManyMutationInput, otpsUncheckedUpdateManyWithoutUserInput>
+  export type OtpsUpdateManyWithWhereWithoutUserInput = {
+    where: OtpsScalarWhereInput
+    data: XOR<OtpsUpdateManyMutationInput, OtpsUncheckedUpdateManyWithoutUserInput>
   }
 
-  export type otpsScalarWhereInput = {
-    AND?: otpsScalarWhereInput | otpsScalarWhereInput[]
-    OR?: otpsScalarWhereInput[]
-    NOT?: otpsScalarWhereInput | otpsScalarWhereInput[]
-    id?: StringFilter<"otps"> | string
-    code?: StringFilter<"otps"> | string
-    expiry?: DateTimeFilter<"otps"> | Date | string
-    userId?: StringFilter<"otps"> | string
-    createdAt?: DateTimeFilter<"otps"> | Date | string
-    updatedAt?: DateTimeFilter<"otps"> | Date | string
+  export type OtpsScalarWhereInput = {
+    AND?: OtpsScalarWhereInput | OtpsScalarWhereInput[]
+    OR?: OtpsScalarWhereInput[]
+    NOT?: OtpsScalarWhereInput | OtpsScalarWhereInput[]
+    id?: StringFilter<"Otps"> | string
+    code?: StringFilter<"Otps"> | string
+    expiry?: DateTimeFilter<"Otps"> | Date | string
+    userId?: StringFilter<"Otps"> | string
+    createdAt?: DateTimeFilter<"Otps"> | Date | string
+    updatedAt?: DateTimeFilter<"Otps"> | Date | string
   }
 
-  export type usersCreateWithoutOtpsInput = {
+  export type UsersCreateWithoutOtpsInput = {
     id?: string
     name: string
     email: string
@@ -3939,7 +3939,7 @@ export namespace Prisma {
     updatedAt?: Date | string
   }
 
-  export type usersUncheckedCreateWithoutOtpsInput = {
+  export type UsersUncheckedCreateWithoutOtpsInput = {
     id?: string
     name: string
     email: string
@@ -3949,23 +3949,23 @@ export namespace Prisma {
     updatedAt?: Date | string
   }
 
-  export type usersCreateOrConnectWithoutOtpsInput = {
-    where: usersWhereUniqueInput
-    create: XOR<usersCreateWithoutOtpsInput, usersUncheckedCreateWithoutOtpsInput>
+  export type UsersCreateOrConnectWithoutOtpsInput = {
+    where: UsersWhereUniqueInput
+    create: XOR<UsersCreateWithoutOtpsInput, UsersUncheckedCreateWithoutOtpsInput>
   }
 
-  export type usersUpsertWithoutOtpsInput = {
-    update: XOR<usersUpdateWithoutOtpsInput, usersUncheckedUpdateWithoutOtpsInput>
-    create: XOR<usersCreateWithoutOtpsInput, usersUncheckedCreateWithoutOtpsInput>
-    where?: usersWhereInput
+  export type UsersUpsertWithoutOtpsInput = {
+    update: XOR<UsersUpdateWithoutOtpsInput, UsersUncheckedUpdateWithoutOtpsInput>
+    create: XOR<UsersCreateWithoutOtpsInput, UsersUncheckedCreateWithoutOtpsInput>
+    where?: UsersWhereInput
   }
 
-  export type usersUpdateToOneWithWhereWithoutOtpsInput = {
-    where?: usersWhereInput
-    data: XOR<usersUpdateWithoutOtpsInput, usersUncheckedUpdateWithoutOtpsInput>
+  export type UsersUpdateToOneWithWhereWithoutOtpsInput = {
+    where?: UsersWhereInput
+    data: XOR<UsersUpdateWithoutOtpsInput, UsersUncheckedUpdateWithoutOtpsInput>
   }
 
-  export type usersUpdateWithoutOtpsInput = {
+  export type UsersUpdateWithoutOtpsInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
@@ -3975,7 +3975,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type usersUncheckedUpdateWithoutOtpsInput = {
+  export type UsersUncheckedUpdateWithoutOtpsInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
@@ -3985,7 +3985,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type otpsCreateManyUserInput = {
+  export type OtpsCreateManyUserInput = {
     id?: string
     code: string
     expiry: Date | string
@@ -3993,7 +3993,7 @@ export namespace Prisma {
     updatedAt?: Date | string
   }
 
-  export type otpsUpdateWithoutUserInput = {
+  export type OtpsUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     code?: StringFieldUpdateOperationsInput | string
     expiry?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -4001,7 +4001,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type otpsUncheckedUpdateWithoutUserInput = {
+  export type OtpsUncheckedUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     code?: StringFieldUpdateOperationsInput | string
     expiry?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -4009,7 +4009,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type otpsUncheckedUpdateManyWithoutUserInput = {
+  export type OtpsUncheckedUpdateManyWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     code?: StringFieldUpdateOperationsInput | string
     expiry?: DateTimeFieldUpdateOperationsInput | Date | string
