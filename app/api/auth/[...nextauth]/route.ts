@@ -1,9 +1,12 @@
-import NextAuth, { type NextAuthOptions } from "next-auth";
-import CredentialsProvider from "next-auth/providers/credentials";
-import GoogleProvider from "next-auth/providers/google";
+import NextAuth from "next-auth";
 import { PrismaClient } from "@/app/generated/prisma";
 import bcrypt from "bcrypt";
 import { z } from "zod";
+import { NextAuthOptions } from "next-auth";
+
+// Import your providers here
+import CredentialsProvider from "next-auth/providers/credentials";
+import GoogleProvider from "next-auth/providers/google";
 
 const prisma = new PrismaClient();
 
@@ -18,7 +21,6 @@ const authOptions: NextAuthOptions = {
         },
       },
     }),
-
     CredentialsProvider({
       name: "Credentials",
       credentials: {
@@ -26,44 +28,35 @@ const authOptions: NextAuthOptions = {
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        try {
-          const schema = z.object({
-            email: z.string().email(),
-            password: z.string().min(6),
-          });
+        const schema = z.object({
+          email: z.string().email(),
+          password: z.string().min(6),
+        });
 
-          const { email, password } = schema.parse(credentials);
+        const { email, password } = schema.parse(credentials);
 
-          const user = await prisma.users.findUnique({ where: { email } });
+        const user = await prisma.users.findUnique({ where: { email } });
 
-          if (!user) throw new Error("No user found");
-          if (!user.password) throw new Error("No password set for user");
-          if (!user.verifiedAt) throw new Error("User not verified");
+        if (!user) throw new Error("No user found");
+        if (!user.password) throw new Error("No password set for user");
+        if (!user.verifiedAt) throw new Error("User not verified");
+        const valid = await bcrypt.compare(password, user.password);
+        if (!valid) throw new Error("Invalid password");
 
-          const valid = await bcrypt.compare(password, user.password);
-          if (!valid) throw new Error("Invalid password");
-
-          return {
-            id: user.id,
-            email: user.email,
-            name: user.name,
-          };
-        } catch (err) {
-          console.error("Authorize Error:", err);
-          return null;
-        }
+        return {
+          id: user.id,
+          email: user.email,
+          name: user.name
+        };
       },
     }),
   ],
-
   callbacks: {
     async signIn({ user, account }) {
       if (account?.provider === "google") {
         if (!user.email) throw new Error("No email from Google account");
 
-        const existingUser = await prisma.users.findUnique({
-          where: { email: user.email },
-        });
+        const existingUser = await prisma.users.findUnique({ where: { email: user.email } });
 
         if (!existingUser) {
           await prisma.users.create({
@@ -71,7 +64,6 @@ const authOptions: NextAuthOptions = {
               name: user.name || "",
               email: user.email,
               verifiedAt: new Date(),
-              password: "", // set default empty password for social logins
             },
           });
         } else if (!existingUser.verifiedAt) {
@@ -81,38 +73,13 @@ const authOptions: NextAuthOptions = {
           });
         }
       }
-
       return true;
     },
-
-    async session({ session, token }) {
-      if (token?.sub && session.user) {
-        session.user.id = token.sub;
-      }
-      return session;
-    },
-
-    async jwt({ token, user }) {
-      if (user) {
-        token.id = user.id;
-      }
-      return token;
-    },
   },
-
-  pages: {
-    signIn: "/signin",
-  },
-
-  session: {
-    strategy: "jwt",
-  },
-
+  session: { strategy: "jwt" },
+  pages: { signIn: "/signin" },
   secret: process.env.NEXTAUTH_SECRET,
 };
 
 const handler = NextAuth(authOptions);
-
-export const GET = handler
-export const POST = handler
-
+export { handler as GET, handler as POST };
