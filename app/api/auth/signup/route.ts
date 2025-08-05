@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import bcrypt from "bcryptjs";
+import bcrypt from "bcrypt";
 import { z } from "zod";
 import { PrismaClient } from "@prisma/client";
 
