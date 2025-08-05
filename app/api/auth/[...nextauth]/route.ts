@@ -15,11 +15,10 @@ const authOptions: NextAuthOptions = {
       clientId: process.env.GOOGLE_CLIENT_ID || "",
       clientSecret: process.env.GOOGLE_CLIENT_SECRET || "",
       authorization: {
-        params: {
-          prompt: "select_account",
-        },
+        params: { prompt: "select_account" },
       },
     }),
+
     CredentialsProvider({
       name: "Credentials",
       credentials: {
@@ -35,18 +34,16 @@ const authOptions: NextAuthOptions = {
 
           const { email, password } = schema.parse(credentials);
 
-          const user = await prisma.user.findUnique({ where: { email } });
+          const user = await prisma.users.findUnique({ where: { email } });
           if (!user || !user.password || !user.verifiedAt) return null;
 
-          const valid = await bcrypt.compare(password, user.password);
-          if (!valid) return null;
+          const isValid = await bcrypt.compare(password, user.password);
+          if (!isValid) return null;
 
           return {
             id: user.id,
             email: user.email,
             name: user.name,
-            role: user.role,
-            status: user.status,
           };
         } catch (error) {
           console.error("Authorize error:", error);
@@ -55,28 +52,28 @@ const authOptions: NextAuthOptions = {
       },
     }),
   ],
+
   callbacks: {
     async signIn({ user, account }) {
       try {
         if (account?.provider === "google") {
           if (!user.email) return false;
 
-          const existingUser = await prisma.user.findUnique({
+          const existingUser = await prisma.users.findUnique({
             where: { email: user.email },
           });
 
           if (!existingUser) {
-            await prisma.user.create({
+            await prisma.users.create({
               data: {
                 name: user.name || "",
                 email: user.email,
+                password: "", // Kosongkan password karena login via Google
                 verifiedAt: new Date(),
-                role: "USER",          // Default role
-                status: "ACTIVE",                  
               },
             });
           } else if (!existingUser.verifiedAt) {
-            await prisma.user.update({
+            await prisma.users.update({
               where: { email: user.email },
               data: { verifiedAt: new Date() },
             });
@@ -86,30 +83,33 @@ const authOptions: NextAuthOptions = {
         return true;
       } catch (error) {
         console.error("SIGNIN ERROR", error);
-        return false; // Returning false triggers AccessDenied
+        return false;
       }
     },
+
     async jwt({ token, user }) {
       if (user) {
-        token.id = user.id
-        token.role = (user as any).role
-        token.status = (user as any).status
+        token.id = user.id;
       }
       return token;
     },
+
     async session({ session, token }) {
       if (token?.id && session.user) {
-        session.user.id = token.id as string
-        session.user.role = token.role as string
-        session.user.status = token.status as string
+        session.user.id = token.id as string;
       }
       return session;
     },
   },
-  session: { strategy: "jwt" },
+
+  session: {
+    strategy: "jwt",
+  },
+
   pages: {
     signIn: "/signin",
   },
+
   secret: process.env.NEXTAUTH_SECRET,
 };
 
