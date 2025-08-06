@@ -1,10 +1,15 @@
 {
   "private": true,
+  "type": "module",  
   "scripts": {
     "build": "next build",
     "dev": "next dev --turbopack",
     "start": "next start",
-    "postinstall": "prisma generate"    
+    "postinstall": "prisma generate",
+    "seed": "node prisma/seed.mjs"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.mjs"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -34,7 +39,8 @@
     "@types/node": "22.10.7",
     "@types/react": "19.0.7",
     "@types/react-dom": "19.0.3",
-    "prisma": "^6.13.0"
+    "prisma": "^6.13.0",
+    "ts-node": "^10.9.2"
   },
   "pnpm": {
     "onlyBuiltDependencies": [

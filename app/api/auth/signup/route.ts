@@ -16,7 +16,7 @@ export async function POST(req: Request) {
 
   const { email, password, name } = schema.parse(data);
 
-  const exist = await prisma.user.findUnique({
+  const exist = await prisma.users.findUnique({
     where: { email },
   });
 
@@ -26,7 +26,7 @@ export async function POST(req: Request) {
 
   const hashedPassword = await bcrypt.hash(password, 10);
 
-  const user = await prisma.user.create({
+  const user = await prisma.users.create({
     data: {
       email,
       password: hashedPassword,
