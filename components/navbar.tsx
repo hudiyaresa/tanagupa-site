@@ -157,6 +157,9 @@ export function Navbar() {
               variant="filled"
               color={pathname !== "/" ? "gray" : "black"}
               className="bg-black text-white hover:bg-gray-800"
+              placeholder=""      
+              onPointerEnterCapture={() => {}}
+              onPointerLeaveCapture={() => {}}                
               onClick={() => router.push("/signin")}
             >
                 Log in
