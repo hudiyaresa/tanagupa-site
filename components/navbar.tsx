@@ -106,15 +106,13 @@ export function Navbar() {
           ))}
         </ul>
         <div className="hidden items-center gap-2 lg:flex">
-          <Link href="/signin" passHref>
-            <Button variant="filled" color={pathname !== '/' ? "gray" : isScrolling ? "gray" : "black"} className="bg-black text-white hover:bg-gray-800"
-              placeholder=""      
-              onPointerEnterCapture={() => {}}
-              onPointerLeaveCapture={() => {}}
-            >
-              Log in
-            </Button>
-          </Link>
+          <Button as="a" href="/signin" variant="filled" color={pathname !== '/' ? "gray" : isScrolling ? "gray" : "black"} className="bg-black text-white hover:bg-gray-800"
+            placeholder=""      
+            onPointerEnterCapture={() => {}}
+            onPointerLeaveCapture={() => {}}
+          >
+            Log in
+          </Button>
         </div>
         <IconButton
           variant="text"
@@ -150,15 +148,15 @@ export function Navbar() {
             ))}
           </ul>
           <div className="mt-6 flex items-center gap-2">
-            <Link href="/signin" passHref>
-              <Button
-                variant="filled"
-                color={pathname !== "/" ? "gray" : "black"}
-                className="bg-black text-white hover:bg-gray-800"
-              >
-                Log in
-              </Button>
-            </Link>
+            <Button
+              as="a"
+              href="/signin"
+              variant="filled"
+              color={pathname !== "/" ? "gray" : "black"}
+              className="bg-black text-white hover:bg-gray-800"
+            >
+              Log in
+            </Button>
           </div>
         </div>
       </Collapse>
