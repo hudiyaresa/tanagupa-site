@@ -61,7 +61,7 @@ export default function Page() {
   };
 
   // Event handler untuk menekan tombol Enter
-  const handleKeyDown = (e) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLFormElement>) => {
     if (e.key === 'Enter' && !isLoading) {
       handleLogin(); // Panggil handleLogin jika tombol aktif
     }
