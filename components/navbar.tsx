@@ -41,6 +41,7 @@ function NavItem({
 export function Navbar() {
   const [open, setOpen] = React.useState(false);
   const [isScrolling, setIsScrolling] = React.useState(false);
+  const router = useRouter();
   const pathname = typeof window !== 'undefined' ? window.location.pathname : '/';
   function handleOpen() {
     setOpen((cur) => !cur);
