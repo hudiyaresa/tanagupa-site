@@ -137,27 +137,32 @@ export function Navbar() {
           <ul className="flex flex-col gap-4">
             {NAV_MENU.map((item) => (
               <NavItem key={item.name} href={item.href}>
-                <span className={
-                  pathname === item.href
-                    ? "bg-gray-900 text-white rounded-md px-4 py-2 font-bold shadow-md"
-                    : ""
-                }>
+                <span
+                  className={`${
+                    pathname === item.href
+                      ? "bg-gray-900 text-white rounded-md px-4 py-2 font-bold shadow-md"
+                      : "text-gray-800 hover:bg-gray-200 hover:text-black px-4 py-2 rounded-md"
+                  }`}
+                >
                   {item.name}
                 </span>
               </NavItem>
             ))}
           </ul>
           <div className="mt-6 flex items-center gap-2">
-            <Button variant="filled" color={pathname !== '/' ? "gray" : "black"} className="bg-black text-white hover:bg-gray-800"
-              placeholder=""      
-              onPointerEnterCapture={() => {}}
-              onPointerLeaveCapture={() => {}}
-            >
-              Log in
-            </Button>
+            <Link href="/signin" passHref>
+              <Button
+                variant="filled"
+                color={pathname !== "/" ? "gray" : "black"}
+                className="bg-black text-white hover:bg-gray-800"
+              >
+                Log in
+              </Button>
+            </Link>
           </div>
         </div>
       </Collapse>
+
     </MTNavbar>
   );
 }
